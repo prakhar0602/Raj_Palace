@@ -49,7 +49,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-[#F5E6D3] text-[#2C3E50] min-h-screen">
+    <div className=" text-[#2C3E50] min-h-screen">
       {/* Hero Section */}
       <Image_Grid />
 
