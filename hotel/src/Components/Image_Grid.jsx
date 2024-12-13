@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
+import p1 from '../assets/1.png'
+import p2 from '../assets/2.png'
+import p3 from '../assets/3.png'
+import p4 from '../assets/4.png'
+import p5 from '../assets/5.png'
 const Image_Grid = () => {
   // List of images
   const images = [
-    'src/assets/1.png', // Replace with your image paths
-    'src/assets/2.png', // Replace with your image paths
-    'src/assets/3.png', // Replace with your image paths
-    'src/assets/4.png', // Replace with your image paths
-    'src/assets/5.png', // Replace with your image paths
-    ];
+    p1,p2,p3,p4,p5];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
