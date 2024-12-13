@@ -23,6 +23,7 @@ const Image_Grid = () => {
   return (
     <div className="relative w-full overflow-hidden z-0">
       {/* Image Container */}
+      <img src={p1} alt="" />
       <div
         className="flex transition-transform duration-1000"
         style={{
