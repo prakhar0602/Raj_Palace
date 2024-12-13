@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import p1 from '../assets/1.png'
-import p2 from '../assets/2.png'
-import p3 from '../assets/3.png'
-import p4 from '../assets/4.png'
-import p5 from '../assets/5.png'
+import p1 from '../assets/a.png'
+import p2 from '../assets/b.png'
+import p3 from '../assets/c.png'
+import p4 from '../assets/d.png'
+import p5 from '../assets/e.png'
 const Image_Grid = () => {
   // List of images
   const images = [
@@ -23,7 +23,6 @@ const Image_Grid = () => {
   return (
     <div className="relative w-full overflow-hidden z-0">
       {/* Image Container */}
-      <img src={p1} alt="" />
       <div
         className="flex transition-transform duration-1000"
         style={{
@@ -33,7 +32,7 @@ const Image_Grid = () => {
         {images.map((image, index) => (
           <img
             key={index}
-            src={p1}
+            src={image}
             alt={`Slide ${index + 1}`}
             className="w-full h-[90vh] object-cover flex-shrink-0 "
           />
