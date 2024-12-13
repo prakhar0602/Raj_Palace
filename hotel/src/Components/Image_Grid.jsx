@@ -32,7 +32,7 @@ const Image_Grid = () => {
         {images.map((image, index) => (
           <img
             key={index}
-            src={image}
+            src={p1}
             alt={`Slide ${index + 1}`}
             className="w-full h-[90vh] object-cover flex-shrink-0 "
           />
