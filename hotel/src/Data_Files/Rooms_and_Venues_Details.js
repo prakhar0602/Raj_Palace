@@ -17,7 +17,7 @@ import shikarbadi from "../assets/Images/Dining/shikarbadi.jpg";
 import swapna from "../assets/Images/Dining/Swapna Mahal.jpg";
 import Charbagh from "../assets/Images/Outdoor/Charbagh.jpg";
 import diwaneaam from "../assets/Images/Outdoor/diwan e Aam 2.jpg";
-import diwanekhaas from "../assets/Images/Outdoor/diwan e Khaas.jpg";
+import diwanekhaas from "../assets/Images/Outdoor/Diwan e Khaas.jpg";
 import fountain from "../assets/Images/Outdoor/Fountain_Courtyard.jpg";
 import maharani from "../assets/Images/Outdoor/Maharani bagh.jpg";
 import Moti from "../assets/Images/Outdoor/Moti Chowk.jpg";
