@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import main from "../../assets/Images/Wedding/Main.jpg";
 import main2 from "../../assets/Images/Wedding/main2.jpg";
 import main3 from "../../assets/Images/Wedding/main3.jpg";
@@ -20,6 +20,8 @@ import w3 from "../../assets/Images/Wedding/w3.jpg"
 import w4 from "../../assets/Images/Wedding/w4.jpg"
 
 import Image from "../../Components/Image";
+import { setLoading } from "../../Redux/CommonVariables";
+import { useDispatch } from "react-redux";
 
 const Wedding = () => {
   let images = [main, main2, main3, main4];
@@ -45,7 +47,10 @@ const Wedding = () => {
     }
   ]
 
-
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(setLoading(false))
+  },[])
   return (
     <div className="flex flex-col w-full min-h-screen pb-10 bg-[#ffc0c0]">
       {/* Hero Section */}

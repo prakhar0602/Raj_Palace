@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react'
 import logo from '../../assets/Images/logos/RajPalace.png'
 import title from '../../assets/Images/logos/RajPalace_title.png'
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setLoading } from '../../Redux/CommonVariables';
 const NavMobile = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate()
+    const dispatch = useDispatch()
      const [fixed,setFixed] = useState(false)
     const menuItems = {
         'Home':{link:'/',icon:"home"}, 
@@ -26,6 +29,8 @@ const NavMobile = () => {
         },[])
 
     function goTo(link){
+        if(window.location.pathname!=link)
+          dispatch(setLoading(true))
         navigate(link)
     }
 

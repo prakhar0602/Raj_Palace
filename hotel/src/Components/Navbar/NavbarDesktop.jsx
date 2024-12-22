@@ -19,6 +19,8 @@ const NavbarDesktop = () => {
   let dispatch = useDispatch()
   
   function goTo(link) {
+    if(window.location.pathname!=link)
+    dispatch(setLoading(true))
     navigate(link);
   }
   const menuItems = {

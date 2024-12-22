@@ -17,6 +17,7 @@ import History from "./Pages/History/History";
 import Accomodation from "./Pages/Accomodation";
 import Meetings_and_Buisness from "./Pages/Meetings_and_Buisness";
 import Wedding from "./Pages/Wedding/Wedding";
+import PageTransition from "./Components/PageTransition";
 
 function App() {
   const dispatch = useDispatch()
