@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/Images/logos/RajPalace.png";
+import title from "../../assets/Images/logos/RajPalace_title.png";
 import menu from "../../assets/Images/logos/menu.svg";
 import { useNavigate } from "react-router-dom";
 import { content } from "./HoveredMenu_Data";
@@ -105,8 +106,9 @@ const NavbarDesktop = () => {
       </div>
       {/* Centered logo */}
       <div className="flex justify-center items-center w-full ">
-        <button className="w-fit h-fit"  onClick={()=>goTo("/")}>
-        <img src={logo} className="h-[13vh]" alt="Raj Palace" />
+        <button className="flex justify-center items-center w-fit h-fit"  onClick={()=>goTo("/")}>
+        <img src={logo} className="h-[11vh]" alt="Raj Palace" />
+        <img src={title} className="h-[8vh]" alt="Raj Palace" />
         </button>
       </div>
 

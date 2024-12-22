@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../../assets/Images/logos/RajPalace.png'
+import title from '../../assets/Images/logos/RajPalace_title.png'
 import { useNavigate } from 'react-router-dom';
 const NavMobile = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate()
+     const [fixed,setFixed] = useState(false)
     const menuItems = {
         'Home':{link:'/',icon:"home"}, 
         'Accommodation':{link:'/accomodation',icon:"bed"}, 'Dining':{link:'/dining',icon:"pizza"}, 
@@ -12,17 +14,28 @@ const NavMobile = () => {
         // 'Events':"/notDefined", 'Rates':'/notDefined'
     };
 
+     useEffect(()=>{
+          function handleScroll(){
+            const vh= window.innerHeight;
+            if(window.scrollY > 0.5*vh)
+              setFixed(true)
+            else
+              setFixed(false)
+          }
+          window.addEventListener("scroll",handleScroll)
+        },[])
+
     function goTo(link){
         navigate(link)
     }
 
   return (
-    <nav className="bg-white/90 shadow-2xl fixed w-full z-50">
-      <div className="flex justify-between items-center px-6 py-4">
+    <nav className={`${fixed ? "fixed animate-slide-down" : ""} bg-white/90 shadow-2xl flex w-full z-50`}>
+      <div className="flex justify-between w-full items-center px-6 py-4">
         {/* Logo */}
-        <div className="text-lg flex h-[5vh] justify-center gap-2 items-center font-serif font-bold text-[#000] tracking-wider">
+        <div className="text-lg flex h-[6vh] justify-center gap-2 items-center font-serif font-bold text-[#000] tracking-wider">
           <img src={logo} alt="" className='h-full' />
-          <p className='font-garamond text-xl'>The Raj Palace</p>
+          <img src={title} alt="" className='h-full'/>
         </div>
 
         {/* Hamburger Menu */}
@@ -51,7 +64,7 @@ const NavMobile = () => {
       <div
         className={`fixed top-0 right-0 h-full w-72 bg-white shadow-lg p-4 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out`}
+        } transition-transform duration-300 ease-in-out z-50`}
       >
         {/* Close Button */}
         <button
