@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/Images/logos/RajPalace.png";
 import menu from "../../assets/Images/logos/menu.svg";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +12,7 @@ const NavbarDesktop = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menu1Content, setContent1] = useState([]);
   const [menu2Content, setContent2] = useState([]);
+  const [fixed,setFixed] = useState(false)
   let list = useSelector((state)=>state.list)
   let navigate = useNavigate();
   let dispatch = useDispatch()
@@ -24,11 +25,22 @@ const NavbarDesktop = () => {
     Accommodation: { link: "/accomodation", icon: "bed", key: "a" },
     Dining: { link: "/dining", icon: "pizza" },
     // 'Activities':'/notDefined',
-    Weddings: { link: "/notDefined", icon: "heart" },
+    Weddings: { link: "/wedding", icon: "heart" },
     "Meetings & Business": { link: "/iv_ov", icon: "cafe", key: "mb" },
     // 'Events':"/notDefined", 'Rates':'/notDefined'
   };
  
+    useEffect(()=>{
+      function handleScroll(){
+        const vh= window.innerHeight;
+        if(window.scrollY > 0.5*vh)
+          setFixed(true)
+        else
+          setFixed(false)
+      }
+      window.addEventListener("scroll",handleScroll)
+    },[])
+
    const room = useSelector((state)=>state.room) 
 
   function selectRoom(x) {
@@ -78,7 +90,7 @@ const NavbarDesktop = () => {
       }
 
   return (
-    <div className="fixed bg-white/70 flex justify-between items-center w-full top-0 z-40 px-4 h-[13vh]">
+    <div className={  `${fixed ? "fixed animate-slide-down" : ""} bg-white/70 flex justify-between items-center w-full top-0 z-40 px-4 h-[13vh] transition-all duration-1000`}>
 
       {/* Menu icon on the right */}
       <div className="flex justify-end items-center ">

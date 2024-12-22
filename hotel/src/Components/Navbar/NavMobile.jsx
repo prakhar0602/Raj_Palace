@@ -8,7 +8,7 @@ const NavMobile = () => {
         'Home':{link:'/',icon:"home"}, 
         'Accommodation':{link:'/accomodation',icon:"bed"}, 'Dining':{link:'/dining',icon:"pizza"}, 
         // 'Activities':'/notDefined', 
-          'Weddings':{link:'/notDefined',icon:"heart"}, 'Meetings & Business':{link:'/iv_ov',icon:"cafe"}, 
+          'Weddings':{link:'/wedding',icon:"heart"}, 'Meetings & Business':{link:'/iv_ov',icon:"cafe"}, 
         // 'Events':"/notDefined", 'Rates':'/notDefined'
     };
 

@@ -16,6 +16,7 @@ import Navbar_Component from "./Components/Navbar/Navbar_Component";
 import History from "./Pages/History/History";
 import Accomodation from "./Pages/Accomodation";
 import Meetings_and_Buisness from "./Pages/Meetings_and_Buisness";
+import Wedding from "./Pages/Wedding/Wedding";
 
 function App() {
   const dispatch = useDispatch()
@@ -45,6 +46,7 @@ function App() {
           <Route path='/notDefined' element={<NotDefined />} />
           <Route path='/accomodation' element={<Accomodation />} />
           <Route path='/loading' element={<LoadingPage />} />
+          <Route path='/wedding' element={<Wedding />} />
         </Routes>
       <Footer />
       </div>
