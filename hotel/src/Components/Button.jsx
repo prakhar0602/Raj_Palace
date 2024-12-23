@@ -27,9 +27,9 @@ const Button = () => {
     <div className="fixed right-4 top-3/4 transform -translate-y-1/2 z-50">
       <button 
         className={`
-          bg-[#001F54] text-white 
+          bg-[#093685] text-white 
           md:w-16 md:h-16 w-14 h-14 rounded-full 
-          shadow-lg hover:bg-[#a07339] 
+          shadow-lg hover:bg-[#0b162a] 
           transition-all duration-300
           flex items-center justify-center
           ${isFlipping ? 'animate-flip' : ''}

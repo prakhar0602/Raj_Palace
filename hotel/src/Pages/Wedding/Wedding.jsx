@@ -27,6 +27,7 @@ const Wedding = () => {
   let images = [main, main2, main3, main4];
   let gallery = [[g1, g2, g3], [g4, g5, g6]];
   const [selectedImage, setImage] = useState(images[0]);
+  const [i_index,setI] = useState(0)
 
   const weddingImage=[
     {
@@ -49,8 +50,14 @@ const Wedding = () => {
 
   const dispatch = useDispatch()
   useEffect(()=>{
+    const interval = setInterval(() => {
+      // Move to the next image
+      setI((i_index + 1) % images.length);
+      setImage(images[(i_index + 1) % images.length])
+    }, 5000);
     dispatch(setLoading(false))
-  },[])
+    return ()=>{clearInterval(interval)};
+  },[selectedImage])
   return (
     <div className="flex flex-col w-full min-h-screen pb-10 bg-[#ffc0c0]">
       {/* Hero Section */}

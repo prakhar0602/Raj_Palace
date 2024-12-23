@@ -61,7 +61,7 @@ const Dining = () => {
           Dining
         </h2>
         <div className="h-fit flex justify-center ">
-          <div className="flex lg:flex-row flex-col gap-14 w-full p-5 overflow-scroll no-scrollbar">
+          <div className="flex lg:flex-row flex-col gap-14 w-full p-5 overflow-scroll no-scrollbar justify-center md:justify-normal items-center">
             {Object.keys(dining).map((specialty, index) => (
               <div
                 key={index}

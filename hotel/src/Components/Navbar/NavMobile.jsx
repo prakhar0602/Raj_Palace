@@ -29,6 +29,7 @@ const NavMobile = () => {
         },[])
 
     function goTo(link){
+        setIsOpen(false)
         if(window.location.pathname!=link)
           dispatch(setLoading(true))
         navigate(link)

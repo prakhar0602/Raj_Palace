@@ -50,7 +50,7 @@ const Home = () => {
           Our Specialities
         </h2>
         <div className="h-fit flex justify-center w-full ">
-          <div className="flex md:gap-14 gap-7 w-[95%] md:p-5 p-2 overflow-scroll no-scrollbar">
+          <div className="flex md:gap-14 gap-7 w-[95%] md:p-5 p-2 overflow-x-scroll scrollbar-thin scrollbar-thumb-purple-950 scrollbar-track-gray-100 ">
             {specialties.map((specialty, index) => (
               <div 
                 key={index} 

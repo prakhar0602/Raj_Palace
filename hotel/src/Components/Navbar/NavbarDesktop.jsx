@@ -21,6 +21,7 @@ const NavbarDesktop = () => {
   function goTo(link) {
     if(window.location.pathname!=link)
     dispatch(setLoading(true))
+    setIsOpen(false)
     navigate(link);
   }
   const menuItems = {
@@ -36,7 +37,7 @@ const NavbarDesktop = () => {
     useEffect(()=>{
       function handleScroll(){
         const vh= window.innerHeight;
-        if(window.scrollY > 0.5*vh)
+        if(window.scrollY > 0.3*vh)
           setFixed(true)
         else
           setFixed(false)
@@ -57,6 +58,7 @@ const NavbarDesktop = () => {
       return;
     dispatch(setLoading(true));
     dispatch(setRoomDetails(x.name));
+    setIsOpen(false)
     navigate(x.link);
   }
   
@@ -66,6 +68,7 @@ const NavbarDesktop = () => {
     }
   
     function linkFunction(item) {
+      setIsOpen(false)
       console.log(item)
       if(item=="Reservation" || ((list && item==list.heading) && (window.location.pathname=='/list') ))
         return

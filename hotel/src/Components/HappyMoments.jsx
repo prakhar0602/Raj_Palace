@@ -88,7 +88,7 @@ const HappyMoments = () => {
       <div 
         ref={rightScrollRef}
         onScroll={handleRightScroll}
-        className="w-full md:-ml-[150px] md:h-[80%] h-[60%] overflow-y-auto no-scrollbar"
+        className="w-full md:-ml-[150px] md:h-[80%] h-[60%] overflow-y-auto scrollbar-thin scrollbar-thumb-black"
       >
         <div className="w-full  md:flex flex-col h-full gap-14 mx-auto">
           {images.map((image,index) => (
