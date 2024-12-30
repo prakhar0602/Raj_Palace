@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/Images/logos/RajPalace.png";
 import title from "../../assets/Images/logos/RajPalace_title.png";
-import menu from "../../assets/Images/logos/menu.svg";
 import { useNavigate } from "react-router-dom";
 import { content } from "./HoveredMenu_Data";
 import { useDispatch, useSelector } from "react-redux";
@@ -96,7 +95,7 @@ const NavbarDesktop = () => {
       }
 
   return (
-    <div className={  `${fixed ? "fixed animate-slide-down" : ""} bg-white/70 flex justify-between items-center w-full top-0 z-40 px-4 h-[13vh] transition-all duration-1000`}>
+    <div className={  `${fixed ? "animate-slide-down bg-white/70" : ""} fixed  flex justify-between items-center w-full top-0 z-40 px-4 h-[13vh] transition-all duration-500`}>
 
       {/* Menu icon on the right */}
       <div className="flex justify-end items-center ">
@@ -106,7 +105,9 @@ const NavbarDesktop = () => {
             console.log(true);
           }}
         >
-          <img src={menu} className="h-[40px]" alt="Menu Icon" />
+          <p className={`${fixed?"text-black":"text-white"}  text-[40px]`}>
+          <ion-icon name="menu"></ion-icon>
+          </p>
         </button>
       </div>
       {/* Centered logo */}
@@ -138,7 +139,7 @@ const NavbarDesktop = () => {
           <div className="flex w-1/5 flex-col justify-between h-full" onMouseEnter={()=>selectContent(undefined,false)}>
             <div className="flex flex-col w-full">
               <ul
-                className="w-full flex flex-col gap-10 cursor-default"
+                className="w-full flex flex-col gap-7 cursor-default"
                
               >
                 {Object.keys(menuItems).map((item, index) => (
@@ -167,7 +168,7 @@ const NavbarDesktop = () => {
 
 
           <div className="w-[1px]  bg-[#a5a5a55d]"></div>
-          <div className="flex flex-col w-2/5 gap-5" >
+          <div className="flex flex-col w-2/5 gap-2" >
             {Object.keys(menu1Content).map((item, i) => (
               <button
                 onClick={() => linkFunction(item)}
@@ -196,7 +197,7 @@ const NavbarDesktop = () => {
             ))}
           </div>
           <div className="w-[1px] bg-[#a5a5a55d]"></div>
-          <div className=" flex flex-col gap-5">
+          <div className=" flex flex-col gap-3">
             {
               menu2Content.map((item,i)=>(
                 <button

@@ -8,6 +8,7 @@ import HappyMoments from '../Components/HappyMoments';
 import Gallery from '../Components/Gallery';
 import {images,specialties} from '../Data_Files/Specialities.js'
 import Button from '../Components/Button';
+import video from '../assets/video.mp4'
 const Home = () => {
 
   let dispatch = useDispatch()
@@ -18,8 +19,8 @@ const Home = () => {
 
   return (
     <div className=" text-[#2C3E50] w-full flex flex-col  justify-center items-center box-content">
-      
-      <Image_Grid images={images} />
+    <video src={video} autoPlay={true} playsInline loop={true} muted={true} className="w-full h-auto md:h-[90vh] object-cover flex-shrink-0" />
+    <div className='relative w-full h-auto  md:-mt-[90vh] md:h-[90vh] object-cover flex-shrink-0 bg-black/40'></div>
 
       <Booking_Form />
 
@@ -68,7 +69,7 @@ const Home = () => {
         </div>
       </div>
 
-            <div className='container md:w-[70%] w-[90%] h-[90vh]'>
+            <div className='container md:w-[80%] w-[90%] h-[90vh]'>
             <HappyMoments />
             </div>
             <div className='container md:my-14 my-5'>

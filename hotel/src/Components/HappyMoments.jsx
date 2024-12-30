@@ -19,24 +19,12 @@ const HappyMoments = () => {
   const rightScrollRef = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const images=[
-    {
-      "sq":imgsq1,
-      "img1":img1,
-      "img2":img2,
-      "img3":img3
-    },
-    {
-      "sq":imgsq2,
-      "img1":img4,
-      "img2":img5,
-      "img3":img6
-    },
-    {
-      "sq":imgsq3,
-      "img1":img7,
-      "img2":img8,
-      "img3":img9
-    },
+    [img2,imgsq1,img3,img1
+  ],
+    [img5,imgsq2,img6,img4],
+    [
+      img8,imgsq3,img9,img7,
+    ],
   ]
   const handleLeftScroll = () => {
     if (isScrolling) return;
@@ -92,7 +80,7 @@ const HappyMoments = () => {
       >
         <div className="w-full  md:flex flex-col h-full gap-14 mx-auto">
           {images.map((image,index) => (
-              <Collage sq={image.sq} img1={img1} img2={img2} img3={img3} />
+              <Collage images={image} />
           ))}
         </div>
       </div>
