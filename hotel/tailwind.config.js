@@ -9,6 +9,10 @@ export default {
       'wedding': "url('./assets/Images/Wedding/background.png')"
     },
         keyframes: {
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          },
           flip: {
             '0%': { transform: 'rotateY(0deg)' },
             '50%': { transform: 'rotateY(180deg)' },
@@ -20,6 +24,7 @@ export default {
         }
         },
         animation: {
+          fadeIn: 'fadeIn 1s ease-in-out',
           flip: 'flip 1s ease-in-out',
           "slide-down": 'slide-down 0.3s ease-out'
         },
