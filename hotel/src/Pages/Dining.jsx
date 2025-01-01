@@ -14,6 +14,7 @@ import Image_Grid from "../Components/Image_Grid";
 import Speciality from "../Components/Speciality";
 import { useDispatch } from "react-redux";
 import { setLoading } from "../Redux/CommonVariables";
+import Fade from "../Components/Fade";
 
 const Dining = () => {
   const images = [p1, p2, p3];
@@ -53,7 +54,7 @@ const Dining = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <Fade extraCss="flex flex-col justify-center items-center">
       <Image_Grid images={images} />
       <img src={dining1} className="lg:h-[200px] h-[150px] lg:py-5 py-2" alt="" />
       <div className="container mx-auto px-4 py-5 h-fit">
@@ -78,7 +79,7 @@ const Dining = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 

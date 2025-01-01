@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setLoading } from '../../Redux/CommonVariables';
 import { useNavigate } from 'react-router-dom';
 import {setRoomDetails} from '../../Redux/Room'
+import Fade from '../../Components/Fade';
 
 const ListSelected = () => {   
     const room = useSelector((state)=>state.room) 
@@ -26,11 +27,13 @@ const ListSelected = () => {
 
     return (
         <div className="container mx-auto px-4 lg:pt-32 pt-20 pb-5">
+            <Fade>
             <h2 className="lg:text-5xl text-3xl font-poppins-bold text-center text-[#001F54] tracking-wider mb-8">
                 {heading}
             </h2>
+            </Fade>
             <div className="h-fit flex justify-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-20 gap-8   w-full max-w-6xl">
+                <Fade extraCss="grid grid-cols-1 md:grid-cols-2 lg:gap-20 gap-8   w-full max-w-6xl">
                     {Object.keys(list).map((specialty, index) => (
                         <button
                             onClick={() => selectRoom(specialty)}
@@ -45,7 +48,7 @@ const ListSelected = () => {
                             />
                         </button>
                     ))}
-                </div>
+                </Fade>
             </div>
         </div>
     )

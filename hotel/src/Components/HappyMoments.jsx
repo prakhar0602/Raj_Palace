@@ -14,6 +14,9 @@ import imgsq3 from "../assets/Images/Happy Moments/sq3.jpg"
 import spiral from '../assets/Images/Happy Moments/separator.png'
 import below from '../assets/Images/Happy Moments/below.png'
 import Collage from './Collage';
+import RightEnter from './RightEnter';
+import Fade from './Fade';
+import LeftEnter from './LeftEnter';
 const HappyMoments = () => {
   const leftScrollRef = useRef(null);
   const rightScrollRef = useRef(null);
@@ -60,17 +63,17 @@ const HappyMoments = () => {
         onScroll={handleLeftScroll}
         className="w-2/3 text-[#001F54]  flex flex-col items-center justify-center relative"
       >
-        <div className="sticky top-0 flex flex-col justify-center items-center text-center transform  whitespace-nowrapp-5  ">
+        <LeftEnter extraCss="sticky top-0 flex flex-col justify-center items-center text-center transform  whitespace-nowrapp-5  ">
           <img src={below} className='md:w-full w-[70%] z-20' alt="" />
           <h1 className=" z-30 md:text-4xl text-2xl font-garamond font-bold text-center text-[#001F54]  tracking-wider ">
             Happy Moments
           </h1>
-        </div>
+        </LeftEnter>
       </div>
 
-        <div className=' flex flex-col md:-ml-[150px]  w-[80%] md:w-fit md:rotate-90 justify-center items-center'>
+        <Fade extraCss=' flex flex-col md:-ml-[150px]  w-[80%] md:w-fit md:rotate-90 justify-center items-center'>
             <img src={spiral} className="" alt="" />
-      </div>
+      </Fade>
 
       {/* Right Side - Scrollable Content */}
       <div 
@@ -78,11 +81,11 @@ const HappyMoments = () => {
         onScroll={handleRightScroll}
         className="w-full md:-ml-[150px] md:h-[80%] h-[60%] overflow-y-auto scrollbar-thin scrollbar-thumb-black"
       >
-        <div className="w-full  md:flex flex-col h-full gap-14 mx-auto">
+        <RightEnter extraCss="w-full  md:flex flex-col h-full gap-14 mx-auto">
           {images.map((image,index) => (
               <Collage images={image} />
           ))}
-        </div>
+        </RightEnter>
       </div>
     </div>
   );

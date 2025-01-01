@@ -36,7 +36,7 @@ const NavMobile = () => {
     }
 
   return (
-    <nav className={`fixed ${fixed ? " animate-slide-down bg-white/90" : "bg-transparent"}  shadow-2xl flex w-full z-50`}>
+    <nav className={`${fixed ? "fixed  animate-slide-down" : "flex"} bg-white/90 shadow-2xl flex w-[100vw] z-50`}>
       <div className="flex justify-between w-full items-center px-6 py-4">
         {/* Logo */}
         <div className="text-lg flex h-[6vh] justify-center gap-2 items-center font-serif font-bold text-[#000] tracking-wider">
@@ -49,7 +49,7 @@ const NavMobile = () => {
           className="text-royal-purple hover:text-gold-900 transition-colors duration-300 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <p className={`${fixed?"text-black":"text-white"}  text-[30px]`}>
+          <p className={`text-black text-[30px]`}>
           <ion-icon name="menu"></ion-icon>
           </p>
         </button>

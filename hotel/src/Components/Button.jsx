@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Fade from './Fade';
 
 const Button = () => {
   const [isFlipping, setIsFlipping] = useState(false);
@@ -24,7 +25,7 @@ const Button = () => {
   }, []);
 
   return (
-    <div className="fixed right-4 top-3/4 transform -translate-y-1/2 z-50">
+    <Fade extraCss="fixed right-4 top-3/4 transform -translate-y-1/2 z-50">
       <button 
         className={`
           bg-[#093685] text-white 
@@ -41,7 +42,7 @@ const Button = () => {
        <ion-icon name="calendar-outline"></ion-icon>
         </p>
       </button>
-    </div>
+    </Fade>
   );
 };
 

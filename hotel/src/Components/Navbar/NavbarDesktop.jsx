@@ -105,7 +105,7 @@ const NavbarDesktop = () => {
             console.log(true);
           }}
         >
-          <p className={`${fixed?"text-black":"text-white"}  text-[40px]`}>
+          <p className={`${fixed?"text-black":"text-[#b6b6b6]"}  text-[40px]`}>
           <ion-icon name="menu"></ion-icon>
           </p>
         </button>
@@ -136,7 +136,7 @@ const NavbarDesktop = () => {
 
         <div className="flex h-full gap-5">
           {/* Menu Items */}
-          <div className="flex w-1/5 flex-col justify-between h-full" onMouseEnter={()=>selectContent(undefined,false)}>
+          <div className="flex w-[20vw] flex-col justify-between h-full" onMouseEnter={()=>selectContent(undefined,false)}>
             <div className="flex flex-col w-full">
               <ul
                 className="w-full flex flex-col gap-7 cursor-default"
@@ -168,7 +168,7 @@ const NavbarDesktop = () => {
 
 
           <div className="w-[1px]  bg-[#a5a5a55d]"></div>
-          <div className="flex flex-col w-2/5 gap-2" >
+          <div className="flex flex-col w-[30vw] gap-2" >
             {Object.keys(menu1Content).map((item, i) => (
               <button
                 onClick={() => linkFunction(item)}

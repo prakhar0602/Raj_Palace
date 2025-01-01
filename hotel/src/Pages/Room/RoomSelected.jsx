@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setLoading } from '../../Redux/CommonVariables';
 import Image_Grid from '../../Components/Image_Grid';
+import Fade from '../../Components/Fade';
 
 const RoomSelected = () => {
     const roomDetails = useSelector((state) => state.room.roomDetails);
@@ -14,7 +15,7 @@ const RoomSelected = () => {
   },[galleryImages])
 
   return (
-    <div className="min-h-screen  flex flex-col ">
+    <Fade extraCss="min-h-screen  flex flex-col ">
       <Image_Grid images={galleryImages}/>
       <div className='flex flex-col p-5 gap-5'>
 
@@ -63,7 +64,7 @@ const RoomSelected = () => {
 
           </div>
    
-  </div>
+  </Fade>
   )
 }
 

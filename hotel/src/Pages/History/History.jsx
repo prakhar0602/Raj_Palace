@@ -6,6 +6,9 @@ import { setLoading } from '../../Redux/CommonVariables'
 import { useDispatch } from 'react-redux'
 import image11 from '../../assets/Images/History/1_1.jpg'
 import Image from '../../Components/Image';
+import Fade from '../../Components/Fade'
+import LeftEnter from '../../Components/LeftEnter'
+import RightEnter from '../../Components/RightEnter'
 
 const History = () => {
   const dispatch = useDispatch()
@@ -17,6 +20,7 @@ const History = () => {
       
         
       <div className=" min-h-screen  pt-16 lg:pt-44 pb-5 px-8">
+        <Fade>
       <h2 className='
                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
                 font-poppins-bold text-center 
@@ -26,9 +30,11 @@ const History = () => {
               '>
                 The Raj Palace
               </h2>
+
+              </Fade>
       <div className="max-w-4xl mx-auto space-y-12">
         {/* First Section */}
-        <div className="bg-[#cacaca] shadow-2xl rounded-xl overflow-hidden flex flex-col md:flex-row items-center">
+        <LeftEnter extraCss="bg-[#cacaca] shadow-2xl rounded-xl overflow-hidden flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
             <Image src={image11} height="h-full" width="w-full" />
           </div>
@@ -40,10 +46,10 @@ const History = () => {
               The Raj Palace, a traditional palace with some of the modern structures, robs the town of its singular character and charm. This beautiful blend of Mughal and Periodic is the oldest mansion of Jaipur.
             </p>
           </div>
-        </div>
+        </LeftEnter>
 
         {/* Second Section */}
-        <div className="bg-[#cacaca] shadow-2xl rounded-xl overflow-hidden flex flex-col md:flex-row-reverse items-center">
+        <RightEnter extraCss="bg-[#cacaca] shadow-2xl rounded-xl overflow-hidden flex flex-col md:flex-row-reverse items-center">
           <div className="md:w-1/2">
             <Image src={image2} height="h-full" width="w-full" />
             
@@ -56,10 +62,10 @@ const History = () => {
               In 1995, Princess Jayendra Kumari Ji decided to restore this luxurious palace into the finest luxury Palace hotel. The Royal family renovated the arched corridors, the residential quarters and its courtyards with small amplifications, Best services were added like Handicap access etc.
             </p>
           </div>
-        </div>
+        </RightEnter>
 
         {/* Third Section */}
-        <div className="bg-[#cacaca] shadow-2xl rounded-xl overflow-hidden flex flex-col md:flex-row items-center">
+        <LeftEnter extraCss="bg-[#cacaca] shadow-2xl rounded-xl overflow-hidden flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
             <Image src={image3} height="h-full" width="w-full" />
           </div>
@@ -71,13 +77,13 @@ const History = () => {
               Museum suites were created which have the finest Royal antiques giving the property the honor of being first museum suite palace hotel of the world as the suites have their private museum. The specially designed frescoes deciphered with the finest mirror and hand-painted work and rare palace furniture. Large crystal chandeliers leave you adorned with an astonishing fantasy.
             </p>
           </div>
-        </div>
+        </LeftEnter>
       </div>
     </div>
       
        
     <div className=" min-h-screen pt-14 lg:pt-44 pb-5 px-4 sm:px-6 lg:px-8">
-       <h2 className='
+       <Fade><h2 className='
                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
                 font-poppins-bold text-center 
                 text-[#001F54] 
@@ -86,8 +92,9 @@ const History = () => {
               '>
                 Glimpse of Royal Life
               </h2>
+              </Fade>
       <div className="max-w-4xl mx-auto space-y-12">
-        <section className="bg-[#cacaca] shadow-xl rounded-xl overflow-hidden">
+        <LeftEnter extraCss="bg-[#cacaca] shadow-xl rounded-xl overflow-hidden">
           <div className="md:flex">
             <div className=" p-8">
               <h2 className="text-3xl font-garamond text-[#4A3F35] mb-4 border-b-2 border-[#001F54] pb-2">
@@ -97,9 +104,9 @@ const History = () => {
               India was portrayed as the land populated with monsters, magicians and maharajas; its rulers were immeasurably powerful potentates enthroned in vast citadels surrounded by every conceivable luxury, but Indian courts were not accessible to the gaze of foreign observers and the royal continued to be mysterious and alluring. Indeed, this ‘exotic’ appeal of Indian palaces has proved to be long-lasting; it has survived the colonial experience and exists till today in the Royal residences as fortified citadels, complete with massive walls and defensive gateways, as well as armories, barracks and stables and all the culture and richness developed over centuries still lies here preserved in these palaces. </p>
             </div>
           </div>
-        </section>
+        </LeftEnter>
 
-        <section className="bg-[#cacaca] shadow-xl rounded-xl overflow-hidden">
+        <RightEnter extraCss="bg-[#cacaca] shadow-xl rounded-xl overflow-hidden">
           <div className="md:flex md:flex-row-reverse">
             <div className="md:w-1/2">
               <Image
@@ -119,9 +126,9 @@ Whether great or small, Indian monarchs never hesitated to style themselves as m
                 </p>
             </div>
           </div>
-        </section>
+        </RightEnter>
 
-        <section className="bg-[#cacaca] shadow-xl rounded-xl overflow-hidden">
+        <LeftEnter extraCss="bg-[#cacaca] shadow-xl rounded-xl overflow-hidden">
           <div className="md:flex">
             <div className="p-8">
               <h2 className="text-3xl font-garamond text-[#4A3F35] mb-4 border-b-2 border-[#001F54] pb-2">
@@ -132,7 +139,7 @@ Whether great or small, Indian monarchs never hesitated to style themselves as m
                   </p>
             </div>
           </div>
-        </section>
+        </LeftEnter>
       </div>
     </div>
     </div>

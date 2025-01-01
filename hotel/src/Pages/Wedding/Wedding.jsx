@@ -22,6 +22,9 @@ import w4 from "../../assets/Images/Wedding/w4.jpg"
 import Image from "../../Components/Image";
 import { setLoading } from "../../Redux/CommonVariables";
 import { useDispatch } from "react-redux";
+import LeftEnter from "../../Components/LeftEnter";
+import RightEnter from "../../Components/RightEnter";
+import Fade from "../../Components/Fade";
 
 const Wedding = () => {
   let images = [main, main2, main3, main4];
@@ -62,7 +65,7 @@ const Wedding = () => {
     <div className="flex flex-col w-full min-h-screen pb-10 bg-[#ffc0c0]">
       {/* Hero Section */}
       <div className="flex flex-col lg:flex-row h-fit lg:h-[85vh] gap-0 justify-start">
-        <div className="w-fit flex relative">
+        <LeftEnter extraCss="w-fit flex relative">
           <div className="w-fit h-full flex flex-col">
             <img 
               src={selectedImage} 
@@ -72,9 +75,9 @@ const Wedding = () => {
             <div className="h-[15vh] w-full bg-gradient-to-b from-transparent via-[#ffc0c0]/80 to-[#ffc0c0] absolute bottom-0"></div>
           </div>
           <div className="h-full bg-gradient-to-r from-transparent via-[#ffc0c0]/90 to-[#ffc0c0] w-[20vw] absolute right-0"></div>
-        </div>
+        </LeftEnter>
 
-        <div className="bg-[#ffc0c0] h-full w-full px-12 tracking-widest justify-center lg:justify-start lg:gap-14 items-center lg:items-start flex flex-col">
+        <RightEnter extraCss="bg-[#ffc0c0] h-full w-full px-12 tracking-widest justify-center lg:justify-start lg:gap-14 items-center lg:items-start flex flex-col">
         <div className="lg:hidden mt-8 grid grid-cols-2 gap-4">
             {images.map((img, index) => (
               <button
@@ -123,29 +126,31 @@ const Wedding = () => {
               </button>
             ))}
           </div>
-        </div>
+        </RightEnter>
       </div>
 
       {/* Gallery Section */}
       <div className="px-12 lg:py-20 py-10">
+        <Fade>
         <h2 className="text-4xl font-garamond mb-12 text-center">Wedding Gallery</h2>
+        </Fade>
         <div className="hidden lg:flex flex-col gap-8 max-w-7xl mx-auto">
           {gallery.map((rows, index) => (
             <div key={index} className="flex gap-8 justify-center">
               {rows.map((image, imgIndex) => (
-                <div key={imgIndex} className="overflow-hidden rounded-xl shadow-lg">
+                <Fade key={imgIndex} extraCss="overflow-hidden rounded-xl shadow-lg">
                   <Image
                     src={image}
                     height="md:h-80 h-52"
                     extraCSS="hover:scale-105 transition-all duration-500"
                     width="md:w-96 w-32"
                   />
-                </div>
+                </Fade>
               ))}
             </div>
           ))}
         </div>
-        <div className="lg:hidden flex flex-col gap-8 max-w-7xl mx-auto">
+        <Fade extraCss="lg:hidden flex flex-col gap-8 max-w-7xl mx-auto">
           {gallery.map((rows, index) => (
             <div key={index} className="flex flex-col gap-8 justify-center">
               {rows.map((image, imgIndex) => (
@@ -160,29 +165,29 @@ const Wedding = () => {
               ))}
             </div>
           ))}
-        </div>
+        </Fade>
       </div>
 
       {/* Bottom Section */}
       <div className="flex gap-12 px-12 lg:py-20 py-10 h-fit w-full">
-        <div className="hidden lg:flex overflow-hidden rounded-xl shadow-lg w-full h-[70vh]">
+        <LeftEnter extraCss="hidden lg:flex overflow-hidden rounded-xl shadow-lg w-full h-[70vh]">
           <img src={p1} alt="Wedding venue" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
-        </div>
+        </LeftEnter>
         
-        <div className="flex flex-col items-center w-[90vw]">
+        <Fade extraCss="flex flex-col items-center w-[90vw]">
           <h2 className="lg:text-4xl text-2xl font-garamond lg:mb-12 mb-5 text-center">Your love, our inspiration, the perfect celebration.</h2>
           <p className="font-poppins lg:text-lg text-md text-justify leading-relaxed text-gray-700">
             The perfect destination for your dream wedding. Nestled in a picturesque location with breathtaking views, our elegant venues and impeccable service create a magical setting for your special day. From intimate ceremonies to grand celebrations, we offer tailor-made packages, exquisite dining options, and luxurious accommodations for you and your guests. Let us turn your wedding into a celebration of love, joy, and cherished memories that will last a lifetime. Your happily ever after begins here!
           </p>
-        </div>
+        </Fade>
 
-        <div className="hidden lg:flex overflow-hidden rounded-xl shadow-lg w-full h-[70vh]">
+        <RightEnter extraCss="hidden lg:flex overflow-hidden rounded-xl shadow-lg w-full h-[70vh]">
           <img src={p2} alt="Wedding celebration" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
-        </div>
+        </RightEnter>
       </div>
 
 
-          <div className="w-full h-fit flex flex-col justify-center items-center gap-8 ">
+          <Fade extraCss="w-full h-fit flex flex-col justify-center items-center gap-8 ">
             <p className="lg:text-4xl text-2xl font-garamond text-center">Real Weddings at The Raj Palace</p>
             <div className="flex lg:flex-row flex-col gap-5">
                 {
@@ -198,7 +203,7 @@ const Wedding = () => {
                 ))
             }
             </div>
-          </div>
+          </Fade>
 
     </div>
   );
