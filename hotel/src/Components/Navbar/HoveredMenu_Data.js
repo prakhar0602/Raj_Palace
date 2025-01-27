@@ -74,7 +74,7 @@ export const content = {
       },
       "Download MICE Brochure": {
         content: [],
-        link: "/src/assets/Mice-Brochure-The-Raj-Palace.pdf",
+        link: "/Mice-Brochure-The-Raj-Palace.pdf",
       },
     },
   };
