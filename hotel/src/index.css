@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* add the code bellow */
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+@font-face {
+  font-family: "monsterrat";
+  src: url("/src/assets/font/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "monsterrat-medium";
+  src: url("/src/assets/font/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "monsterrat-thin";
+  src: url("/src/assets/font/Montserrat-Thin.ttf");
+}
+@font-face {
+  font-family: "garamond";
+  src: url("/src/assets/font/Garamond Premier Pro Regular.ttf");
+}
+@font-face {
+  font-family: "poppins";
+  src: url("/src/assets/font/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "poppins-bold";
+  src: url("/src/assets/font/Poppins-Bold.ttf");
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-autoScroll {
+  animation: autoScroll 20s linear infinite;
+  display: flex;
+  white-space: nowrap;
+}
+
