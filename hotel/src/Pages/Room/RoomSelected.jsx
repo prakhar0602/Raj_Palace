@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setLoading } from '../../Redux/CommonVariables';
 import Image_Grid from '../../Components/Image_Grid';
 import Fade from '../../Components/Fade';
+import { Link } from 'react-router-dom';
 
 const RoomSelected = () => {
     const roomDetails = useSelector((state) => state.room.roomDetails);
-  const amenities =  useSelector((state) => state.room.amenities);
   const galleryImages =  useSelector((state) => state.room.galleryImages);
 
   const dispatch = useDispatch()
@@ -52,9 +52,9 @@ const RoomSelected = () => {
 
         {/* Pricing & Booking */}
         <div className="flex items-center justify-end gap-12">
-          <button className="bg-[#001F54] hover:bg-[#0c192f] text-white font-poppins px-6 py-3 rounded-md shadow-md transition-all">
+          <Link to='/booking' target="_blank" className="bg-[#001F54] hover:bg-[#0c192f] text-white font-poppins px-6 py-3 rounded-md shadow-md transition-all">
             BOOK NOW
-          </button>
+          </Link>
           </div>
         </div>
       </div>

@@ -22,6 +22,7 @@ import fountain from "../assets/Images/Outdoor/Fountain_Courtyard.jpg";
 import maharani from "../assets/Images/Outdoor/Maharani bagh.jpg";
 import Moti from "../assets/Images/Outdoor/Moti Chowk.jpg";
 import shatranj from "../assets/Images/Outdoor/Shatranj_Chowk.jpg";
+import shahi from "../assets/Images/Presidential Suits/shahi_mahal.jpg"
 
 export let room = {
   "Heritage Room": {
@@ -120,7 +121,7 @@ export let room = {
       { icon: "📶", text: "Wi-Fi" },
       { icon: "🍽️", text: "Catering" },
     ],
-    galleryImages: [],
+    galleryImages: [shahi],
   },
   Manoranjan: {
     roomDetails: {

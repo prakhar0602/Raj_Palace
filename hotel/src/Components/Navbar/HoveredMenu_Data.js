@@ -43,7 +43,7 @@ export const content = {
         content: [
           {
             name: "Book Online",
-            link: "https://be.synxis.com/?adult=1&arrive=2025-01-26&chain=22402&child=0&currency=USD&depart=2025-01-27&hotel=78522&level=hotel&locale=en-US&productcurrency=USD&rooms=1&src=24C" },
+            link: "/booking" },
         ],
         link: "#",
       },

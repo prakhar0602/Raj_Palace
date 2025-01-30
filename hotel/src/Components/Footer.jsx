@@ -36,7 +36,7 @@ const Footer = () => {
           <Link to="/awards" className="hover:text-gray-500">Awards</Link>
           <Link to="/contactus" className="hover:text-gray-500">Contact Us</Link>
           <Link to="/workforUs" className="hover:text-gray-500">Work for Us</Link>
-          <Link onClick={()=>window.open("https://be.synxis.com/?adult=1&arrive=2024-12-13&chain=22402&child=0&currency=USD&depart=2024-12-14&hotel=78522&level=hotel&locale=en-US&productcurrency=USD&rooms=1&src=24C")} className="hover:text-gray-500">Book Online</Link>
+          <Link to="/booking" className="hover:text-gray-500" target="_blank">Book Online</Link>
         </div>
 
         {/* Footer Bottom */}

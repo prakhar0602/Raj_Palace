@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
@@ -18,6 +18,18 @@ import Accomodation from "./Pages/Accomodation";
 import Meetings_and_Buisness from "./Pages/Meetings_and_Buisness";
 import Wedding from "./Pages/Wedding/Wedding";
 import PageTransition from "./Components/PageTransition";
+
+
+const ExternalRedirect = () => {
+  useEffect(() => {
+    window.location.href =
+      'https://be.synxis.com/?adult=1&arrive=2025-01-26&chain=22402&child=0&currency=USD&depart=2025-01-27&hotel=78522&level=hotel&locale=en-US&productcurrency=USD&rooms=1&src=24C';
+  }, []);
+
+  return <div className="w-screen h-screen flex justify-center items-center">Redirecting...</div>; // Optional loading message
+};
+
+
 
 function App() {
   const dispatch = useDispatch()
@@ -48,6 +60,7 @@ function App() {
           <Route path='/accomodation' element={<Accomodation />} />
           <Route path='/loading' element={<LoadingPage />} />
           <Route path='/wedding' element={<Wedding />} />
+          <Route path='/booking' element={<ExternalRedirect/>} />
         </Routes>
       <Footer />
       </div>

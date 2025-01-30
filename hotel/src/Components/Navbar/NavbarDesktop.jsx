@@ -13,6 +13,7 @@ const NavbarDesktop = () => {
   const [menu1Content, setContent1] = useState([]);
   const [menu2Content, setContent2] = useState([]);
   const [fixed,setFixed] = useState(false)
+  const [key,selectKey] = useState('')
   let list = useSelector((state)=>state.list)
   let navigate = useNavigate();
   let dispatch = useDispatch()
@@ -136,7 +137,7 @@ const NavbarDesktop = () => {
 
         <div className="flex h-full gap-5">
           {/* Menu Items */}
-          <div className="flex w-[20vw] flex-col justify-between h-full" onMouseEnter={()=>selectContent(undefined,false)}>
+          <div className="flex w-[20vw] flex-col justify-between h-full" onMouseEnter={()=>selectContent(undefined,false)} >
             <div className="flex flex-col w-full">
               <ul
                 className="w-full flex flex-col gap-7 cursor-default"
@@ -144,14 +145,21 @@ const NavbarDesktop = () => {
               >
                 {Object.keys(menuItems).map((item, index) => (
                   <button
-                    onMouseEnter={() => setContent1(menuItems[item].key?content[menuItems[item].key]:menu1Content)}
+                    onMouseEnter={() => {setContent1(menuItems[item].key?content[menuItems[item].key]:menu1Content);selectKey(menuItems[item].key?menuItems[item].key:key)}}
                     onClick={() => goTo(menuItems[item].link)}
-                    className="flex items-center space-x-2"
+                    className="flex items-center space-x-2 "
                   >
                     <span>
                       <ion-icon name={menuItems[item].icon}></ion-icon>
                     </span>
+                    <div className="flex items-center w-full justify-between">
+
                     <span className="font-monsterrat">{item.toUpperCase()}</span>
+                    {
+                      menuItems[item].key?(<span className={`text-black text-2xl transition-transform duration-300 ${
+                        key==menuItems[item].key ? "rotate-180" : "" }`}><i class='bx bx-chevron-right'></i></span>):(<span></span>)
+                    }
+                    </div>
                   </button>
                 ))}
               </ul>

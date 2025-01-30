@@ -1,14 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Booking_Form = () => {
   const [checkInDate, setCheckInDate] = useState("2025-01-01");
   const [checkOutDate, setCheckOutDate] = useState("2025-12-14");
 
-  const handleBooking = () => {
-    const baseUrl =`https://be.synxis.com/?adult=1&arrive=${checkInDate}&chain=22402&child=0&currency=USD&depart=${checkOutDate}&hotel=78522&level=hotel&locale=en-US&productcurrency=USD&rooms=1&src=24C`
-    const bookingUrl = `${baseUrl}&arrive=${checkInDate}&depart=${checkOutDate}`;
-    window.location.href = bookingUrl; // Redirect to the booking URL
-  };
+  
 
   return (
     <div className="hidden md:flex h-fit justify-center items-center bg-transparent -mt-28 relative z-30">
@@ -42,12 +39,13 @@ const Booking_Form = () => {
 
           {/* Book Now Button */}
           <div className="flex justify-center items-center">
-            <button
-              onClick={handleBooking}
+            <Link
+              to='/booking'
+              target="_blank"
               className="bg-brown-500 text-black py-3 px-6 rounded-lg font-semibold hover:bg-brown-600 transition duration-300"
             >
               Book Now
-            </button>
+            </Link>
           </div>
         </div>
       </div>
