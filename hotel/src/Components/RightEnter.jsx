@@ -31,7 +31,7 @@ const RightEnter = ({ children, delay = 400, extraCss = "h-full w-full" }) => {
   return (
     <div
       ref={domRef}
-      className={`transition-all duration-1000 ease-out ${extraCss}
+      className={`transition-all duration-500 ease-out ${extraCss}
         ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-16'}`}
     >
       {children}

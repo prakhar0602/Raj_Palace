@@ -13,10 +13,35 @@ import Fade from "../Components/Fade.jsx";
 import LeftEnter from "../Components/LeftEnter.jsx";
 const Home = () => {
   let dispatch = useDispatch();
-
   useEffect(() => {
-    window.onload = dispatch(setLoading(false));
-  }, []);
+    const allMedia = document.querySelectorAll('img, video'); // Select images and videos
+
+    if (allMedia.length === 0) {
+      dispatch(setLoading(false));
+      return;
+    }
+
+    let mediaLoaded = 0;
+
+    const handleMediaLoad = () => {
+      mediaLoaded++;
+      if (mediaLoaded === allMedia.length) {
+        dispatch(setLoading(false));
+      }
+    };
+
+    allMedia.forEach(mediaElement => {
+      if (mediaElement.complete) { // Check if already loaded (for images)
+        handleMediaLoad();
+      } else if (mediaElement.readyState === 4) { //check if video is loaded
+        handleMediaLoad();
+      }
+      else {
+        mediaElement.onload = handleMediaLoad;
+        mediaElement.onerror = handleMediaLoad; // Handle errors for both
+      }
+    });
+},[]);
 
   return (
     <div className=" text-[#2C3E50] w-full flex flex-col  justify-center items-center box-content">

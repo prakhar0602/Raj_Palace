@@ -36,6 +36,7 @@ const Collage = ({ images }) => {
         )}
         <img 
           src={src} 
+          onLoad = {()=>console.log("IMage Loaded")}
           alt={`Collage ${index + 1}`}
           className={`
             absolute
