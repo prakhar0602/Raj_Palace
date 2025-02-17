@@ -15,7 +15,7 @@ const Home = () => {
   let dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setLoading(false));
+    window.onload = dispatch(setLoading(false));
   }, []);
 
   return (
