@@ -11,7 +11,7 @@ const RoomSelected = () => {
 
   const dispatch = useDispatch()
   useEffect(()=>{
-    dispatch(setLoading(false))
+    window.onload = dispatch(setLoading(false))
   },[galleryImages])
 
   return (

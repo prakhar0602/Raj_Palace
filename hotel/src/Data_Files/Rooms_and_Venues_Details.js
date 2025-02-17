@@ -25,7 +25,7 @@ import shatranj from "../assets/Images/Outdoor/Shatranj_Chowk.jpg";
 import shahi from "../assets/Images/Presidential Suits/shahi_mahal.jpg"
 
 export let room = {
-  "Heritage Room": {
+  "Heritage_Room": {
     roomDetails: {
       title: "Heritage Rooms",
       description:
@@ -39,7 +39,7 @@ export let room = {
     ],
     galleryImages: [hr1],
   },
-  "Premier Room": {
+  "Premier_Room": {
     roomDetails: {
       title: "Premier Room",
       description:
@@ -53,7 +53,7 @@ export let room = {
     ],
     galleryImages: [pr1, pr2],
   },
-  "Historical Room": {
+  "Historical_Room": {
     roomDetails: {
       title: "Historical Room",
       description:
@@ -67,7 +67,7 @@ export let room = {
     ],
     galleryImages: [hi1],
   },
-  "Prestige Suites": {
+  "Prestige_Suites": {
     roomDetails: {
       title: "Prestige Suites",
       description:
@@ -81,7 +81,7 @@ export let room = {
     ],
     galleryImages: [pre1],
   },
-  "Palace Suites": {
+  "Palace_Suites": {
     roomDetails: {
       title: "Palace Suites",
       description:
@@ -95,7 +95,7 @@ export let room = {
     ],
     galleryImages: [ps1, ps2],
   },
-  "Maharajah's Pavillion": {
+  "Maharajah's_Pavillion": {
     roomDetails: {
       title: "Maharajah's Pavillion",
       description:
@@ -109,7 +109,7 @@ export let room = {
     ],
     galleryImages: [durbar2, level1, level2, a1],
   },
-  "Shahi Mahal": {
+  "Shahi_Mahal": {
     roomDetails: {
       title: "Shahi Mahal",
       description:
@@ -137,7 +137,7 @@ export let room = {
     ],
     galleryImages: [theatre],
   },
-  "Baithak Hall": {
+  "Baithak_Hall": {
     roomDetails: {
       title: "Baithak Hall",
       description:
@@ -151,7 +151,7 @@ export let room = {
     ],
     galleryImages: [baithak],
   },
-  "Swapna Mahal": {
+  "Swapna_Mahal": {
     roomDetails: {
       title: "Swapna Mahal",
       description:
@@ -165,7 +165,7 @@ export let room = {
     ],
     galleryImages: [swapna],
   },
-  "Royal Lounge": {
+  "Royal_Lounge": {
     roomDetails: {
       title: "Royal Lounge",
       description:
@@ -193,7 +193,7 @@ export let room = {
     ],
     galleryImages: [shikarbadi],
   },
-  "Mehfil Mahal": {
+  "Mehfil_Mahal": {
     roomDetails: {
       title: "Mehfil Mahal",
       description:
@@ -207,7 +207,7 @@ export let room = {
     ],
     galleryImages: [mehfil],
   },
-  "Diwan-E-Aam": {
+  "Diwan_E_Aam": {
     roomDetails: {
       title: "Diwan-E-Aam",
       description:
@@ -221,7 +221,7 @@ export let room = {
     ],
     galleryImages: [diwaneaam],
   },
-  "Diwan-E-Khaas": {
+  "Diwan_E_Khaas": {
     roomDetails: {
       title: "Diwan-E-Khaas",
       description:
@@ -250,7 +250,7 @@ export let room = {
     galleryImages: [Charbagh],
     img: Charbagh,
   },
-  "Maharani Bagh": {
+  "Maharani_Bagh": {
     roomDetails: {
       title: "Maharani Bagh",
       description:
@@ -264,7 +264,7 @@ export let room = {
     ],
     galleryImages: [maharani],
   },
-  "Moti Chowk": {
+  "Moti_Chowk": {
     roomDetails: {
       title: "Moti Chowk",
       description:
@@ -278,7 +278,7 @@ export let room = {
     ],
     galleryImages: [Moti],
   },
-  "Fountain Courtyard": {
+  "Fountain_Courtyard": {
     roomDetails: {
       title: "Fountain Courtyard",
       description:
@@ -292,7 +292,7 @@ export let room = {
     ],
     galleryImages: [fountain],
   },
-  "Shatranj Chowk": {
+  "Shatranj_Chowk": {
     roomDetails: {
       title: "Shatranj Chowk",
       description:

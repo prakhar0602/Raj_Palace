@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/Images/logos/RajPalace.png";
 import title from "../../assets/Images/logos/RajPalace_title.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { content } from "./HoveredMenu_Data";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoading } from "../../Redux/CommonVariables";
@@ -9,11 +9,13 @@ import {setRoomDetails} from '../../Redux/Room'
 import {setList} from '../../Redux/List'
 
 const NavbarDesktop = () => {
+  const {id} = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const [menu1Content, setContent1] = useState([]);
   const [menu2Content, setContent2] = useState([]);
   const [fixed,setFixed] = useState(false)
   const [key,selectKey] = useState('')
+  const [key2,selectKey2] = useState('')
   let list = useSelector((state)=>state.list)
   let navigate = useNavigate();
   let dispatch = useDispatch()
@@ -52,12 +54,9 @@ const NavbarDesktop = () => {
       window.open(x.link);
       return;
     }
-      console.log(room)
-    console.log(x.name)
-    if(room && x.name == room.roomDetails.title && window.location.pathname=='/room')
-      return;
+      // console.log(room)
+    // console.log(x.name)
     dispatch(setLoading(true));
-    dispatch(setRoomDetails(x.name));
     setIsOpen(false)
     navigate(x.link);
   }
@@ -91,6 +90,7 @@ const NavbarDesktop = () => {
           setContent2([]);
           return;
         }
+        selectKey2(key);
         const subContent = menu1Content[key]["content"];
         setContent2(subContent);
       }
@@ -137,7 +137,7 @@ const NavbarDesktop = () => {
 
         <div className="flex h-full gap-5">
           {/* Menu Items */}
-          <div className="flex w-[20vw] flex-col justify-between h-full" onMouseEnter={()=>selectContent(undefined,false)} >
+          <div className="flex w-[20vw] flex-col justify-between h-full" onMouseEnter={()=>{selectContent(undefined,false);selectKey2('')}} >
             <div className="flex flex-col w-full">
               <ul
                 className="w-full flex flex-col gap-7 cursor-default"
@@ -181,7 +181,7 @@ const NavbarDesktop = () => {
               <button
                 onClick={() => linkFunction(item)}
                 onMouseEnter={() => selectContent(item, true)}
-                className="group relative cursor-pointer  
+                className="flex gap-5 justify-center group relative cursor-pointer  
               px-7 py-3.5 text-[#001F54]
                 transition-all duration-300 
                 transform hover:-translate-y-0.5 
@@ -201,6 +201,10 @@ const NavbarDesktop = () => {
                 >
                   {item}
                 </p>
+                {
+                      menu1Content[item]["content"]?(<span className={`text-black text-2xl transition-transform duration-300 ${
+                        key2==item ? "rotate-180" : "" }`}><i class='bx bx-chevron-right'></i></span>):(<span></span>)
+                    }
               </button>
             ))}
           </div>
