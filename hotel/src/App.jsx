@@ -34,9 +34,36 @@ const ExternalRedirect = () => {
 function App() {
   const dispatch = useDispatch()
   const loading = useSelector((state)=>state.variables.loading)
-  // useEffect(() => {
-  //   dispatch(setLoading(false));
-  // }, []);
+  useEffect(() => {
+    const allMedia = document.querySelectorAll('img'); // Select images and videos
+
+    if (allMedia.length === 0) {
+      dispatch(setLoading(false));
+      return;
+    }
+
+    let mediaLoaded = 0;
+
+    const handleMediaLoad = () => {
+      mediaLoaded++;
+      console.log("Media Loaded",allMedia.length)
+      if (mediaLoaded == allMedia.length) {
+        dispatch(setLoading(false));
+      }
+    };
+    
+    allMedia.forEach(mediaElement => {
+        if (mediaElement.complete) { // Check if already loaded (for images)
+        handleMediaLoad();
+      } else if (mediaElement.readyState === 4) { //check if video is loaded
+        handleMediaLoad();
+      }
+      else {
+          mediaElement.onload = handleMediaLoad;
+          mediaElement.onerror = handleMediaLoad; // Handle errors for both
+        }
+      });
+  }, []);
 
   return (
       <div className="text-black max-w-full w-full min-h-screen h-fit bg-[#fff]">
