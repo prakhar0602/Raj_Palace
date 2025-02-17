@@ -14,7 +14,7 @@ import LeftEnter from "../Components/LeftEnter.jsx";
 const Home = () => {
   let dispatch = useDispatch();
   useEffect(() => {
-    const allMedia = document.querySelectorAll('img, video'); // Select images and videos
+    const allMedia = document.querySelectorAll('img'); // Select images and videos
 
     if (allMedia.length === 0) {
       dispatch(setLoading(false));
@@ -25,25 +25,27 @@ const Home = () => {
 
     const handleMediaLoad = () => {
       mediaLoaded++;
-      if (mediaLoaded === allMedia.length) {
+      console.log("Media Loaded",allMedia.length)
+      if (mediaLoaded == allMedia.length) {
         dispatch(setLoading(false));
       }
     };
-
+    
     allMedia.forEach(mediaElement => {
-      if (mediaElement.complete) { // Check if already loaded (for images)
+        if (mediaElement.complete) { // Check if already loaded (for images)
         handleMediaLoad();
       } else if (mediaElement.readyState === 4) { //check if video is loaded
         handleMediaLoad();
       }
       else {
-        mediaElement.onload = handleMediaLoad;
-        mediaElement.onerror = handleMediaLoad; // Handle errors for both
-      }
-    });
-},[]);
-
-  return (
+          mediaElement.onload = handleMediaLoad;
+          mediaElement.onerror = handleMediaLoad; // Handle errors for both
+        }
+      });
+          // setTimeout(()=>dispatch(setLoading(false)),3000);
+    },[]);
+    
+    return (
     <div className=" text-[#2C3E50] w-full flex flex-col  justify-center items-center box-content">
       <video
         src={video}

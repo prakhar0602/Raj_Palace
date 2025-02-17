@@ -34,9 +34,9 @@ const ExternalRedirect = () => {
 function App() {
   const dispatch = useDispatch()
   const loading = useSelector((state)=>state.variables.loading)
-  useEffect(() => {
-    dispatch(setLoading(false));
-  }, []);
+  // useEffect(() => {
+  //   dispatch(setLoading(false));
+  // }, []);
 
   return (
       <div className="text-black max-w-full w-full min-h-screen h-fit bg-[#fff]">
