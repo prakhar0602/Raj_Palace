@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 const ListnotDefined = () => {
   const dispatch = useDispatch()
     useEffect(()=>{
+      console.log('entered')
         dispatch(setLoading(false))
       },[])
   return (

@@ -1,7 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { setLoading } from "../Redux/CommonVariables";
 
 const Footer = () => {
+  let dispatch = useDispatch()
   return (
     <footer className="bg-[#2C2C2C] text-white py-10 w-full">
       <div className="container mx-auto px-6">
@@ -32,10 +35,10 @@ const Footer = () => {
         {/* Legal Links Section */}
        
         <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-6 font-monsterrat-medium tracking-widest">
-          <Link to="/" className="hover:text-gray-500">Home</Link>
-          <Link to="/awards" className="hover:text-gray-500">Awards</Link>
-          <Link to="/contactus" className="hover:text-gray-500">Contact Us</Link>
-          <Link to="/workforUs" className="hover:text-gray-500">Work for Us</Link>
+          <Link to="/" onClick={()=>window.location.pathname!="/"?dispatch(setLoading(true)):{}} className="hover:text-gray-500">Home</Link>
+          <Link to="/awards" onClick={()=>window.location.pathname!="/awards"?dispatch(setLoading(true)):{}} className="hover:text-gray-500">Awards</Link>
+          <Link to="/contactus" onClick={()=>window.location.pathname!="/contactus"?dispatch(setLoading(true)):{}} className="hover:text-gray-500">Contact Us</Link>
+          <Link to="/workforUs" onClick={()=>window.location.pathname!="/workforUs"?dispatch(setLoading(true)):{}} className="hover:text-gray-500">Work for Us</Link>
           <Link to="/booking" className="hover:text-gray-500" target="_blank">Book Online</Link>
         </div>
 

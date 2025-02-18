@@ -22,7 +22,7 @@ import Moti from "../assets/Images/Outdoor/Moti Chowk.jpg";
 import shatranj from "../assets/Images/Outdoor/Shatranj_Chowk.jpg";
 
 export let list = {
-  "Presidential Suites": {
+  "Presidential_Suites": {
     "Maharajah's Pavillion": {
       img: maharaja,
       desc: "The suite is a four floor apartment with a private entrance through the Charbagh and the victory corridor, The Pavilion has a private elevator connecting all four floors and the total area of the suite is 16000 square feets and has four bedrooms.",
@@ -32,7 +32,7 @@ export let list = {
       desc: "Being restored since 12 years continuously at The Raj Palace The best designers and architects of the world are blending a real to life Palace of the 17th century Rajput Maharaja's luxurious lifestyle combined with 21st century most modern conveniences provided by technology.",
     },
   },
-  "Rooms & Suites": {
+  "Rooms_&_Suites": {
     "Heritage Room": {
       img: heritage,
       desc: "The heritage Rooms are restored and refurnished, few of them offer private museums of the Art collection of the Royal family. The bathrooms are laid in Italian marble and offer the best modern facilities and designer fittings. The rich palace furniture along with special fabrics and colors add the princely charm to the whole setting of the room. Each room has its own soul, its own individual harmony a marriage of the finest material, rare woods, silk, brocades, furniture and artefacts created by master’s craftsman. The royal guests and the junior members of the royal family had lived in these rooms.",
@@ -54,7 +54,7 @@ export let list = {
       desc: "The Palace Suites are specialty suites and offers the complete Royal apartment blocks within the Palace which include two bedrooms, Living and Dining room. They are the private Pavilions within the Palace. The finest Palace furniture is in real gold , silver or Antique. The suite has display of finest royal art collection in its private museums and offers either private terrace or Private Durbar. The Suite comes with discreet Check-ins and butlers off-Course, and our well trained butlers know how to pamper you , keeping your privacy in mind. A favorite of visiting dignitaries and high powered CEOs alike, this is one suite that – just like its namesake – succeeds in making a big impression, with a massage pool and butler service thrown in for good measure. Let’s take a quick look at our very exclusive two bedroom Palace suites.",
     },
   },
-  "Indoor Venues": {
+  "Indoor_Venues": {
     Manoranjan: {
       desc: "In the 18th Century, the Thakur Sahib had got the first Gramophone (popularly known as CHURI WALA BAAZA), the public from the all the connecting villages and Thikanas came to the haveli to see that Baaza and it was a grand occasion in the evening, later the Churi wala Baaza was converted into the Radio and then the television. Manoranjan, the hi-tech digital potential place for the canvas moving pictures and their perfect melodrama. The cozy home theatre entertains with a big collection of Hollywood and Bollywood movies with subtitles in various European languages. The theatre has a big space for luxury push back chairs with fold write pads. It is designed with Acoustics innovations and has state of art technology and latest 2000 Lumen LCD Projector.",
       img: theatre,
@@ -80,7 +80,7 @@ export let list = {
       img: mehfil,
     },
   },
-  "Outdoor Venues": {
+  "Outdoor_Venues": {
     "Diwan-E-Aam": {
       desc: "The Diwan E Aam a hall of public audience is a double height verandah overlooking the magnificent Palace façade,fountain courtyard and the Charbagh garden. Thakur Sahib used to hold public audiences here he sat on the royal throne surrounded by carpets in silk and gold,receiving homage from the nobles and courtiers. The place is a perfect setting for a formal announcement followed by meals and entertainments. It can seat upto 90 people.",
       img: diwaneaam,

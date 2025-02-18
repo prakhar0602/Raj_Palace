@@ -30,14 +30,14 @@ export const content = {
           { name: "Prestige Suites", img: prestige, link: "/room/Prestige_Suites" },
           { name: "Palace Suites", img: palace, link: "/room/Palace_Suites" },
         ],
-        function: "Rooms & Suites",
+        function: "Rooms_&_Suites",
       },
       "Presidential Suites": {
         content: [
           { name: "Maharajah's Pavillion", img: maharaja, link: "/room/Maharajah's_Pavillion" },
           { name: "Shahi Mahal", img: khaas, link: "/room/Shahi_Mahal" },
         ],
-        function:"Presidential Suites",
+        function:"Presidential_Suites",
       },
       Reservation: {
         content: [
@@ -58,7 +58,7 @@ export const content = {
           { name: "Shikarbadi", img: shikarbadi, link: "/room/Shikarbadi" },
           { name: "Mehfil Mahal", img: mehfil, link: "/room/Mehfil_Mahal" },
         ],
-        function: "Indoor Venues",
+        function: "Indoor_Venues",
       },
       "Outdoor Venues": {
         content: [
@@ -70,7 +70,7 @@ export const content = {
           { name: "Fountain Courtyard", img: fountain, link: "/room/Fountain_Courtyard" },
           { name: "Shatranj Chowk", img: shatranj, link: "/room/Shatranj_Chowk" },
         ],
-        function:"Outdoor Venues",
+        function:"Outdoor_Venues",
       },
       "Download MICE Brochure": {
         content: [],

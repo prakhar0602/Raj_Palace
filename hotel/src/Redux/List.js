@@ -12,7 +12,6 @@ function setlist(state, action) {
     heading: query,
     list: list[query],
   };
-  console.log(object);
   return object;
 }
 

@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Booking_Form = () => {
-  const [checkInDate, setCheckInDate] = useState("2025-01-01");
-  const [checkOutDate, setCheckOutDate] = useState("2025-12-14");
-
   
+const getTomorrowDate = () => {
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  return tomorrow.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+};
+  const [checkInDate, setCheckInDate] = useState(new Date().toISOString().split('T')[0]);
+  const [checkOutDate, setCheckOutDate] = useState(getTomorrowDate());
+
 
   return (
     <div className="hidden md:flex h-fit justify-center items-center bg-transparent -mt-28 relative z-30">

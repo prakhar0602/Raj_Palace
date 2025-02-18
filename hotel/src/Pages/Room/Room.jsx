@@ -11,9 +11,7 @@ const Room = () => {
   const {id} = useParams();
   let dispatch = useDispatch()
   useEffect(()=>{
-    dispatch(setLoading(false))
     dispatch(setRoomDetails(id));
-    console.log(roomS)
     },[id])
   
   return (

@@ -11,13 +11,13 @@ import NotDefined from "./Pages/NotDefined";
 import List from "./Pages/List/List";
 import LoadingPage from "./Pages/LoadingPage";
 import { useDispatch, useSelector } from "react-redux";
-import { setLoading } from "./Redux/CommonVariables";
 import Navbar_Component from "./Components/Navbar/Navbar_Component";
 import History from "./Pages/History/History";
 import Accomodation from "./Pages/Accomodation";
 import Meetings_and_Buisness from "./Pages/Meetings_and_Buisness";
 import Wedding from "./Pages/Wedding/Wedding";
-import PageTransition from "./Components/PageTransition";
+import RoomNotSelected from "./Pages/Room/RoomNotSelected";
+import ListnotDefined from "./Pages/List/ListnotDefined";
 
 
 const ExternalRedirect = () => {
@@ -32,37 +32,8 @@ const ExternalRedirect = () => {
 
 
 function App() {
-  const dispatch = useDispatch()
   const loading = useSelector((state)=>state.variables.loading)
   useEffect(() => {
-    const allMedia = document.querySelectorAll('img'); // Select images and videos
-
-    if (allMedia.length === 0) {
-      dispatch(setLoading(false));
-      return;
-    }
-
-    let mediaLoaded = 0;
-
-    const handleMediaLoad = () => {
-      mediaLoaded++;
-      console.log("Media Loaded",allMedia.length)
-      if (mediaLoaded == allMedia.length) {
-        dispatch(setLoading(false));
-      }
-    };
-    
-    allMedia.forEach(mediaElement => {
-        if (mediaElement.complete) { // Check if already loaded (for images)
-        handleMediaLoad();
-      } else if (mediaElement.readyState === 4) { //check if video is loaded
-        handleMediaLoad();
-      }
-      else {
-          mediaElement.onload = handleMediaLoad;
-          mediaElement.onerror = handleMediaLoad; // Handle errors for both
-        }
-      });
   }, []);
 
   return (
@@ -77,7 +48,9 @@ function App() {
           <Route path='/' element={<Home  />} />
           <Route path='/history' element={<History/>} />
           <Route path='/room/:id' element={<Room />} />
-          <Route path='/list' element={<List />} />
+          <Route path='/room' element={<RoomNotSelected />} />
+          <Route path='/list/:id' element={<List />} />
+          <Route path='/list' element={<ListnotDefined />} />
           <Route path='/dining' element={<Dining />} />
           <Route path='/awards' element={<Awards />} />
           <Route path='/iv_ov' element={<Meetings_and_Buisness />} />

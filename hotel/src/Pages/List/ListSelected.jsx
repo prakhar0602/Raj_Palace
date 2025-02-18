@@ -8,21 +8,45 @@ import Fade from '../../Components/Fade';
 
 const ListSelected = () => {   
     const room = useSelector((state)=>state.room) 
-    const heading = useSelector((state)=>state.list.heading);
+    const heading = useSelector((state)=>state.list.heading.replace(/_/g, " "));
     const list = useSelector((state)=>state.list.list);
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
     useEffect(()=>{
-        dispatch(setLoading(false))
+        const allMedia = document.querySelectorAll('img'); // Select images and videos
+        
+            if (allMedia.length === 0) {
+              setTimeout(()=>dispatch(setLoading(false)),1000);
+              return;
+            }
+        
+            let mediaLoaded = 0;
+        
+            const handleMediaLoad = () => {
+              mediaLoaded++;
+              console.log("Media Loaded",allMedia.length)
+              if (mediaLoaded == allMedia.length) {
+                setTimeout(()=>dispatch(setLoading(false)),1000);
+              }
+            };
+            
+            allMedia.forEach(mediaElement => {
+              if (mediaElement.complete) { // Check if already loaded (for images)
+                handleMediaLoad();
+              } else if (mediaElement.readyState === 4) { //check if video is loaded
+                handleMediaLoad();
+              }
+              else {
+                  mediaElement.onload = handleMediaLoad;
+                  mediaElement.onerror = handleMediaLoad; // Handle errors for both
+                }
+              });
     },[list])
 
     function selectRoom(x) {
-        console.log(x)
-        console.log(room)
         dispatch(setLoading(true));
-        dispatch(setRoomDetails(x));
-        navigate('/room');
+        navigate(`/room/${x.replace(/ /g, '_')}`);
     }
 
     return (

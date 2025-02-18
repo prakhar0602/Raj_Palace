@@ -66,7 +66,7 @@ const HappyMoments = () => {
         <LeftEnter extraCss="sticky top-0 flex flex-col justify-center items-center text-center transform  whitespace-nowrapp-5  ">
           <img src={below} className='md:w-full w-[70%] z-20' alt="" />
           <h1 className=" z-30 md:text-4xl text-2xl font-garamond font-bold text-center text-[#001F54]  tracking-wider ">
-            Happy Moments
+            Perfect Moments
           </h1>
         </LeftEnter>
       </div>

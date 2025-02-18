@@ -14,7 +14,35 @@ import LeftEnter from "../Components/LeftEnter.jsx";
 const Home = () => {
   let dispatch = useDispatch();
   useEffect(() => {
+    const allMedia = document.querySelectorAll('img'); // Select images and videos
+
+    if (allMedia.length === 0) {
+      setTimeout(()=>dispatch(setLoading(false)),1000);
+      return;
+    }
+
+    let mediaLoaded = 0;
+
+    const handleMediaLoad = () => {
+      mediaLoaded++;
+      console.log("Media Loaded",allMedia.length)
+      if (mediaLoaded == allMedia.length) {
+        setTimeout(()=>dispatch(setLoading(false)),1000);
+      }
+    };
     
+    allMedia.forEach(mediaElement => {
+      if (mediaElement.complete) { // Check if already loaded (for images)
+        handleMediaLoad();
+      } else if (mediaElement.readyState === 4) { //check if video is loaded
+        handleMediaLoad();
+      }
+      else {
+          mediaElement.onload = handleMediaLoad;
+          mediaElement.onerror = handleMediaLoad; // Handle errors for both
+        }
+      });
+
           // setTimeout(()=>dispatch(setLoading(false)),3000);
     },[]);
     
@@ -32,8 +60,8 @@ const Home = () => {
 
       <Booking_Form />
       <Fade>
-        <div className="container md:px-16 md:mt-24 px-5 mt-5">
-          <div className="bg-[#cdcdcd] shadow-lg rounded-xl">
+        <div className="container md:px-16 md:mt-24 px-5 mt-5 flex justify-center">
+          <div className="bg-[#cdcdcd] shadow-lg rounded-xl w-full">
             <div className="md:p-8 p-4 text-center">
               <h1 className=" text-xl md:text-4xl font-poppins-bold  text-[#001F54] md:mb-6 mb-3 tracking-wide">
                 Experience The Royal Living with The Raj Palace

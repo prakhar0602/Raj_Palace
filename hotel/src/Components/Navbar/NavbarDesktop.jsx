@@ -62,8 +62,8 @@ const NavbarDesktop = () => {
   }
   
     function setlist(x) {
-      dispatch(setList(x));
-      navigate("/list");
+      dispatch(setLoading(true));
+      navigate(`/list/${x}`);
     }
   
     function linkFunction(item) {
