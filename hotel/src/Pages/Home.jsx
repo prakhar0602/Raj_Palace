@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image_Grid from "../Components/Image_Grid";
 import Booking_Form from "../Components/Booking_Form";
 import Speciality from "../Components/Speciality";
@@ -14,7 +14,13 @@ import Fade from "../Components/Fade.jsx";
 import LeftEnter from "../Components/LeftEnter.jsx";
 const Home = () => {
   let dispatch = useDispatch();
+  let [finalvideo,setVideo] = useState(video_mob);
   useEffect(() => {
+    if(window.innerWidth >= 1024){
+      setVideo(video);
+      console.log('Changed')
+    }
+    console.log(window.innerWidth)
     const allMedia = document.querySelectorAll('img'); // Select images and videos
 
     if (allMedia.length === 0) {
@@ -50,20 +56,12 @@ const Home = () => {
     return (
     <div className=" text-[#2C3E50] w-full flex flex-col  justify-center items-center box-content">
       <video
-        src={video}
+        src={finalvideo}
         autoPlay={true}
         playsInline
         loop={true}
         muted={true}
-        className="hidden lg:block w-full h-auto md:h-[90vh] object-cover flex-shrink-0"
-      />
-      <video
-        src={video_mob}
-        autoPlay={true}
-        playsInline
-        loop={true}
-        muted={true}
-        className="w-full lg:hidden h-auto md:h-[90vh] object-cover flex-shrink-0"
+        className="w-full h-auto md:h-[90vh] object-cover flex-shrink-0"
       />
       <div className="relative w-full h-auto  md:-mt-[90vh] md:h-[90vh] object-cover flex-shrink-0 bg-black/40"></div>
 
