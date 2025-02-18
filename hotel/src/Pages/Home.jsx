@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image_Grid from "../Components/Image_Grid";
 import Booking_Form from "../Components/Booking_Form";
 import Speciality from "../Components/Speciality";
@@ -9,18 +9,11 @@ import Gallery from "../Components/Gallery";
 import { images, specialties } from "../Data_Files/Specialities.js";
 import Button from "../Components/Button";
 import video from "../assets/video.mp4";
-import video_mob from "../assets/video_mob.mp4";
 import Fade from "../Components/Fade.jsx";
 import LeftEnter from "../Components/LeftEnter.jsx";
 const Home = () => {
   let dispatch = useDispatch();
-  let [finalvideo,setVideo] = useState(video_mob);
   useEffect(() => {
-    if(window.innerWidth >= 1024){
-      setVideo(video);
-      console.log('Changed')
-    }
-    console.log(window.innerWidth)
     const allMedia = document.querySelectorAll('img'); // Select images and videos
 
     if (allMedia.length === 0) {
@@ -56,7 +49,7 @@ const Home = () => {
     return (
     <div className=" text-[#2C3E50] w-full flex flex-col  justify-center items-center box-content">
       <video
-        src={finalvideo}
+        src={video}
         autoPlay={true}
         playsInline
         loop={true}
