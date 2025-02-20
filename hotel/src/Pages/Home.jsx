@@ -63,7 +63,7 @@ const Home = () => {
         <div className="container md:px-16 md:mt-24 px-5 mt-5 flex justify-center">
           <div className="bg-[#cdcdcd] shadow-lg rounded-xl w-full">
             <div className="md:p-8 p-4 text-center">
-              <h1 className=" text-xl md:text-4xl font-poppins-bold  text-[#001F54] md:mb-6 mb-3 tracking-wide">
+              <h1 className=" text-xl md:text-4xl font-garamond font-bold  text-[#001F54] md:mb-6 mb-3 tracking-wide">
                 Experience The Royal Living with The Raj Palace
               </h1>
               <div className="md:max-w-4xl max-w-2xl mx-auto md:space-y-4 space-y-2">
@@ -96,8 +96,8 @@ const Home = () => {
       {/* Horizontal Scrollable Specialities List */}
       <Fade>
         <div className="w-full flex flex-col justify-center md:gap-5 gap-2 items-center md:mt-20 mt-10">
-          <h2 className="md:text-5xl text-3xl font-poppins-bold text-center  text-[#001F54] md:mb-0 tracking-wider">
-            Our Specialities
+          <h2 className="md:text-5xl text-3xl font-garamond font-bold text-center  text-[#001F54] md:mb-0 tracking-wider">
+            OUR SPECIALITIES
           </h2>
           <div className="h-fit flex justify-center w-full ">
             <div className="flex md:gap-14 gap-7 w-[95%] md:p-5 p-2 overflow-x-scroll scrollbar-thin scrollbar-thumb-purple-950 scrollbar-track-gray-100 ">

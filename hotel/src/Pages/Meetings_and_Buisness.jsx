@@ -70,8 +70,8 @@ const Meetings_and_Buisness = () => {
   return (
     <div className="flex flex-col w-full h-full justify-center items-center pt-32">
       <Fade>
-        <h2 className="text-3xl lg:text-5xl font-poppins-bold text-center text-[#001F54] tracking-wider">
-          Meetings & Buisness
+        <h2 className="text-3xl lg:text-5xl font-garamond font-bold text-center text-[#001F54] tracking-wider">
+          MEETINGS & BUISNESS
         </h2>
       </Fade>
       <div className="w-full flex flex-col lg:flex-row gap-10 justify-center items-center p-5">

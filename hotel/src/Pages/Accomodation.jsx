@@ -70,8 +70,8 @@ function linkFunction(item) {
   return (
     <div className={`flex  flex-col w-full h-full justify-center items-center lg:pt-32 pt-16 pb-5`}>
         <Fade>
-        <h2 className="text-3xl lg:text-5xl font-poppins-bold text-center text-[#001F54] tracking-wider">
-      Accomodation
+        <h2 className="text-3xl lg:text-5xl font-garamond font-bold text-center text-[#001F54] tracking-wider">
+      ACCOMODATION
     </h2>
         </Fade>
     <div className='w-fit p-5  flex flex-col lg:flex-row gap-10 justify-center items-center'>

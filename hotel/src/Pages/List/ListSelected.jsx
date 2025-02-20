@@ -52,7 +52,7 @@ const ListSelected = () => {
     return (
         <div className="container mx-auto px-4 lg:pt-32 pt-20 pb-5">
             <Fade>
-            <h2 className="lg:text-5xl text-3xl font-poppins-bold text-center text-[#001F54] tracking-wider mb-8">
+            <h2 className="lg:text-5xl text-3xl font-garamond font-bold text-center text-[#001F54] tracking-wider mb-8">
                 {heading}
             </h2>
             </Fade>

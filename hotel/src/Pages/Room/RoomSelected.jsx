@@ -45,7 +45,7 @@ const RoomSelected = () => {
     <Fade extraCss="min-h-screen  flex flex-col ">
       <Image_Grid images={galleryImages} />
       <div className="flex flex-col p-5 gap-5">
-        <h2 className="w-full flex  justify-center items-center text-3xl lg:text-5xl font-poppins-bold mb-2 text-[#001F54] ">
+        <h2 className="w-full flex  justify-center items-center text-3xl lg:text-5xl font-garamond font-bold mb-2 text-[#001F54] ">
           {roomDetails.title}
         </h2>
         <div className="w-full">

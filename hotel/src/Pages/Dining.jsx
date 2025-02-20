@@ -86,8 +86,8 @@ const Dining = () => {
       <Image_Grid images={images} />
       <img src={dining1} className="lg:h-[200px] h-[150px] lg:py-5 py-2" alt="" />
       <div className="container mx-auto px-4 py-5 h-fit">
-        <h2 className="lg:text-5xl text-3xl font-poppins-bold text-center text-[#001F54] lg:mb-14 mb-5 tracking-wider">
-          Dining
+        <h2 className="lg:text-5xl text-3xl font-garamond font-bold text-center text-[#001F54] lg:mb-14 mb-5 tracking-wider">
+          DINING
         </h2>
         <div className="h-fit flex justify-center ">
           <div className="flex lg:flex-row flex-col gap-14 w-full p-5 overflow-scroll justify-center md:justify-normal items-center">

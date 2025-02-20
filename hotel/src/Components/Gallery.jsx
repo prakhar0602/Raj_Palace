@@ -17,8 +17,8 @@ const Gallery = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       {/* Section Header */}
-      <h2 className="md:text-5xl text-2xl font-poppins-bold text-center text-[#001F54] md:mb-14 mb-4 tracking-wider">
-      Grandeur Escapes
+      <h2 className="md:text-5xl text-2xl font-garamond font-bold text-center text-[#001F54] md:mb-14 mb-4 tracking-wider">
+      GRANDEUR ESCAPES
       </h2>
 
       {/* Image Grid */}
