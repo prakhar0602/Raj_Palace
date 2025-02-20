@@ -167,6 +167,7 @@ const NavbarDesktop = () => {
             <div className="flex flex-col w-full">
               <hr className="my-6" />
               <ul className="space-y-4 flex flex-col font-garamond text-md font-medium text-[#000000]">
+                <button className="w-fit" onClick={() => goTo("/awards")} >AWARDS</button>
                 <button className="w-fit" onClick={() => goTo("/history")} >HISTORY</button>
                 <button className="w-fit" onClick={() => goTo("/contactus")}>CONTACT US</button>
                 <button className="w-fit" onClick={() => goTo("/workforUs")}>WORK FOR US</button>
