@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-const RightEnter = ({ children, delay = 400, extraCss = "h-full w-full" }) => {
+const RightEnter = ({ children, delay = 0, extraCss = "h-full w-full" }) => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef(null);
 

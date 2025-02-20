@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-const LeftEnter = ({ children, delay = 400, extraCss = "h-full w-full" }) => {
+const LeftEnter = ({ children, delay = 0, extraCss = "h-full w-full" }) => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef(null);
 

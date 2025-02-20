@@ -18,6 +18,7 @@ import Meetings_and_Buisness from "./Pages/Meetings_and_Buisness";
 import Wedding from "./Pages/Wedding/Wedding";
 import RoomNotSelected from "./Pages/Room/RoomNotSelected";
 import ListnotDefined from "./Pages/List/ListnotDefined";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 
 
 const ExternalRedirect = () => {
@@ -61,6 +62,7 @@ function App() {
           <Route path='/loading' element={<LoadingPage />} />
           <Route path='/wedding' element={<Wedding />} />
           <Route path='/booking' element={<ExternalRedirect/>} />
+          <Route path='/privacyPolicy' element={<PrivacyPolicy/>} />
         </Routes>
       <Footer />
       </div>

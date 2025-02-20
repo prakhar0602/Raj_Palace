@@ -1,23 +1,23 @@
-import heritage from "../../assets/Images/Misc/HeritageRoom.jpg";
-import premier from "../../assets/Images/Misc/premierRooms.jpeg";
-import historical from "../../assets/Images/Misc/HistoricalRoom.jpg";
-import prestige from "../../assets/Images/Misc/PrestigeSuite .jpg";
-import palace from "../../assets/Images/Misc/Palace.jpg";
-import maharaja from "../../assets/Images/Misc/Maharajah.jpg";
-import khaas from "../../assets/Images/Presidential Suits/(Prestige Suite) Khaas Mahal.jpg";
-import baithak from "../../assets/Images/IndoorVenues/Baithak Hall.jpg";
-import theatre from "../../assets/Images/IndoorVenues/Manoranjan Theatre.jpg";
-import mehfil from "../../assets/Images/IndoorVenues/mehfil mahal.jpg";
-import swapna from "../../assets/Images/Dining/Swapna Mahal.jpg";
-import rl from "../../assets/Images/Dining/The Royal Loungejpg.jpg";
-import shikarbadi from "../../assets/Images/Dining/shikarbadi.jpg";
-import Charbagh from "../../assets/Images/Outdoor/Charbagh.jpg";
-import diwaneaam from "../../assets/Images/Outdoor/diwan e Aam 2.jpg";
-import diwanekhaas from "../../assets/Images/Outdoor/Diwan e Khaas.jpg";
-import fountain from "../../assets/Images/Outdoor/Fountain_Courtyard.jpg";
-import maharani from "../../assets/Images/Outdoor/Maharani bagh.jpg";
-import Moti from "../../assets/Images/Outdoor/Moti Chowk.jpg";
-import shatranj from "../../assets/Images/Outdoor/Shatranj_Chowk.jpg";
+import heritage from "../../assets/Images/Menu/HeritageRoom.jpg";
+import premier from "../../assets/Images/Menu/premierRooms.jpeg";
+import historical from "../../assets/Images/Menu/HistoricalRoom.jpg";
+import prestige from "../../assets/Images/Menu/PrestigeSuite .jpg";
+import palace from "../../assets/Images/Menu/Palace.jpg";
+import maharaja from "../../assets/Images/Menu/Maharajah.jpg";
+import khaas from "../../assets/Images/Menu/(Prestige Suite) Khaas Mahal.jpg";
+import baithak from "../../assets/Images/Menu/Baithak Hall.jpg";
+import theatre from "../../assets/Images/Menu/Manoranjan Theatre.jpg";
+import mehfil from "../../assets/Images/Menu/mehfil mahal.jpg";
+import swapna from "../../assets/Images/Menu/Swapna Mahal.jpg";
+import rl from "../../assets/Images/Menu/The Royal Loungejpg.jpg";
+import shikarbadi from "../../assets/Images/Menu/shikarbadi.jpg";
+import Charbagh from "../../assets/Images/Menu/Charbagh.jpg";
+import diwaneaam from "../../assets/Images/Menu/diwan e Aam 2.jpg";
+import diwanekhaas from "../../assets/Images/Menu/Diwan e Khaas.jpg";
+import fountain from "../../assets/Images/Menu/Fountain_Courtyard.jpg";
+import maharani from "../../assets/Images/Menu/Maharani bagh.jpg";
+import Moti from "../../assets/Images/Menu/Moti Chowk.jpg";
+import shatranj from "../../assets/Images/Menu/Shatranj_Chowk.jpg";
 
 
 export const content = {
@@ -60,7 +60,7 @@ export const content = {
         ],
         function: "Indoor_Venues",
       },
-      "Outdoor Venues": {
+      "Menu Venues": {
         content: [
           { name: "Diwan-E-Aam", img: diwaneaam, link: "/room/Diwan_E_Aam" },
           { name: "Diwan-E-Khaas", img: diwanekhaas, link: "/room/Diwan_E_Khaas" },
@@ -70,7 +70,7 @@ export const content = {
           { name: "Fountain Courtyard", img: fountain, link: "/room/Fountain_Courtyard" },
           { name: "Shatranj Chowk", img: shatranj, link: "/room/Shatranj_Chowk" },
         ],
-        function:"Outdoor_Venues",
+        function:"Menu_Venues",
       },
       "Download MICE Brochure": {
         content: [],

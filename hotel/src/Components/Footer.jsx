@@ -39,6 +39,7 @@ const Footer = () => {
           <Link to="/awards" onClick={()=>window.location.pathname!="/awards"?dispatch(setLoading(true)):{}} className="hover:text-gray-500">Awards</Link>
           <Link to="/contactus" onClick={()=>window.location.pathname!="/contactus"?dispatch(setLoading(true)):{}} className="hover:text-gray-500">Contact Us</Link>
           <Link to="/workforUs" onClick={()=>window.location.pathname!="/workforUs"?dispatch(setLoading(true)):{}} className="hover:text-gray-500">Work for Us</Link>
+          <Link to="/privacyPolicy" onClick={()=>window.location.pathname!="/workforUs"?dispatch(setLoading(true)):{}} className="hover:text-gray-500">Privacy Policy</Link>
           <Link to="/booking" className="hover:text-gray-500" target="_blank">Book Online</Link>
         </div>
 

@@ -30,7 +30,7 @@ const Fade = ({ children, delay = 0 , extraCss="h-full w-full"}) => {
         return (
           <div
             ref={domRef}
-            className={` flex justify-center transition-all duration-1000 ease-out ${extraCss}
+            className={` flex justify-center transition-all duration-500 ease-out ${extraCss}
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
           >
             {children}

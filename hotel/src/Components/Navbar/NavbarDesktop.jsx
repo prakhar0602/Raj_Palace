@@ -120,7 +120,7 @@ const NavbarDesktop = () => {
       </div>
 
       <div
-        className={`fixed top-0 left-0 h-full w-[80vw] bg-white shadow-lg p-4 transform ${
+        className={`fixed top-0 left-0 h-full w-[85vw] bg-white shadow-lg p-4 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-500 ease-in-out z-40`
       }
