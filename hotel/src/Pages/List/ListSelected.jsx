@@ -14,6 +14,7 @@ const ListSelected = () => {
     const navigate = useNavigate()
 
     useEffect(()=>{
+      dispatch(setLoading(true))
         const allMedia = document.querySelectorAll('img'); // Select images and videos
         
             if (allMedia.length === 0) {

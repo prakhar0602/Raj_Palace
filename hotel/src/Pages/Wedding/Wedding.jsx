@@ -53,6 +53,7 @@ const Wedding = () => {
 
   const dispatch = useDispatch()
   useEffect(()=>{
+    dispatch(setLoading(true))
     const interval = setInterval(() => {
       // Move to the next image
       setI((i_index + 1) % images.length);

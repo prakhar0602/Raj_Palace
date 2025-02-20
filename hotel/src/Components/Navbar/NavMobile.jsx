@@ -3,7 +3,6 @@ import logo from '../../assets/Images/logos/RajPalace.png'
 import title from '../../assets/Images/logos/RajPalace_title.png'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setLoading } from '../../Redux/CommonVariables';
 const NavMobile = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate()
@@ -30,8 +29,6 @@ const NavMobile = () => {
 
     function goTo(link){
         setIsOpen(false)
-        if(window.location.pathname!=link)
-          dispatch(setLoading(true))
         navigate(link)
     }
 

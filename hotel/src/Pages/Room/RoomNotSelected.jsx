@@ -5,6 +5,7 @@ import { setLoading } from '../../Redux/CommonVariables'
 const RoomNotSelected = () => {
   const dispatch = useDispatch()
   useEffect(()=>{
+          dispatch(setLoading(true));
     dispatch(setLoading(false))
   },[])
   return (

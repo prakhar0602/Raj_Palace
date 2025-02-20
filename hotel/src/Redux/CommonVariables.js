@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-let initialState={loading:true};
+let initialState={loading:false};
 
 let variables = createSlice({
     name:'Variables',

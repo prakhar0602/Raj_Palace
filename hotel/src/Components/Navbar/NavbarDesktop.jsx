@@ -4,7 +4,6 @@ import title from "../../assets/Images/logos/RajPalace_title.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { content } from "./HoveredMenu_Data";
 import { useDispatch, useSelector } from "react-redux";
-import { setLoading } from "../../Redux/CommonVariables";
 import {setRoomDetails} from '../../Redux/Room'
 import {setList} from '../../Redux/List'
 
@@ -22,7 +21,6 @@ const NavbarDesktop = () => {
   
   function goTo(link) {
     if(window.location.pathname!=link)
-    dispatch(setLoading(true))
     setIsOpen(false)
     navigate(link);
   }
@@ -56,13 +54,11 @@ const NavbarDesktop = () => {
     }
       // console.log(room)
     // console.log(x.name)
-    dispatch(setLoading(true));
     setIsOpen(false)
     navigate(x.link);
   }
   
     function setlist(x) {
-      dispatch(setLoading(true));
       navigate(`/list/${x}`);
     }
   
@@ -74,11 +70,9 @@ const NavbarDesktop = () => {
       console.log(window.location.pathname)
       console.log(menu1Content[item])
   
-      dispatch(setLoading(true))
       if (menu1Content[item].function) 
         setlist(menu1Content[item].function);
       else if (item == "Download MICE Brochure"){
-        dispatch(setLoading(false))
         window.open(menu1Content[item].link);
       }else 
         navigate(menu1Content[item].link);

@@ -60,7 +60,7 @@ export const content = {
         ],
         function: "Indoor_Venues",
       },
-      "Menu Venues": {
+      "Outdoor Venues": {
         content: [
           { name: "Diwan-E-Aam", img: diwaneaam, link: "/room/Diwan_E_Aam" },
           { name: "Diwan-E-Khaas", img: diwanekhaas, link: "/room/Diwan_E_Khaas" },
@@ -70,7 +70,7 @@ export const content = {
           { name: "Fountain Courtyard", img: fountain, link: "/room/Fountain_Courtyard" },
           { name: "Shatranj Chowk", img: shatranj, link: "/room/Shatranj_Chowk" },
         ],
-        function:"Menu_Venues",
+        function:"Outdoor_Venues",
       },
       "Download MICE Brochure": {
         content: [],

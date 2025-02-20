@@ -89,6 +89,7 @@ const allMedia = document.querySelectorAll('img'); // Select images and videos
 
   // Handle responsive design
   useEffect(() => {
+    dispatch(setLoading(true))
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };

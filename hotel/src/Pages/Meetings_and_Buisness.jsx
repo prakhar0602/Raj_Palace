@@ -19,6 +19,7 @@ const Meetings_and_Buisness = () => {
 
   let dispatch = useDispatch();
   useEffect(() => {
+    dispatch(setLoading(true))
     const allMedia = document.querySelectorAll('img'); // Select images and videos
 
     if (allMedia.length === 0) {
