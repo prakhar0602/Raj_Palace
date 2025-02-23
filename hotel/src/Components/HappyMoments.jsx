@@ -1,4 +1,22 @@
 import React, { useState, useRef, useEffect } from 'react';
+import pm1 from "../assets/Images/Happy Moments/pm1.png"
+import pm2 from "../assets/Images/Happy Moments/pm2.png"
+import pm3 from "../assets/Images/Happy Moments/pm3.png"
+import pm4 from "../assets/Images/Happy Moments/pm4.png"
+import pm5 from "../assets/Images/Happy Moments/pm5.png"
+import pm6 from "../assets/Images/Happy Moments/pm6.png"
+import pm7 from "../assets/Images/Happy Moments/pm7.png"
+import pm8 from "../assets/Images/Happy Moments/pm8.png"
+import pm9 from "../assets/Images/Happy Moments/pm9.png"
+import pm10 from "../assets/Images/Happy Moments/pm10.png"
+import pm11 from "../assets/Images/Happy Moments/pm11.png"
+import pm12 from "../assets/Images/Happy Moments/pm12.png"
+import pm13 from "../assets/Images/Happy Moments/pm13.png"
+import pm14 from "../assets/Images/Happy Moments/pm14.png"
+import pm15 from "../assets/Images/Happy Moments/pm15.png"
+import pm16 from "../assets/Images/Happy Moments/pm16.png"
+import pm17 from "../assets/Images/Happy Moments/pm17.png"
+import pm18 from "../assets/Images/Happy Moments/pm18.png"
 import img1 from "../assets/Images/Happy Moments/1.jpg"
 import img2 from "../assets/Images/Happy Moments/2.jpg"
 import img3 from "../assets/Images/Happy Moments/3.jpg"
@@ -22,7 +40,11 @@ const HappyMoments = () => {
   const rightScrollRef = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const images=[
-    [img2,imgsq1,img3,img1
+    [pm1,pm2,pm3,pm4],
+    [pm5,pm6,pm7,pm8],
+    [pm9,pm10,pm11,pm12],
+    [pm13,pm14,pm15,pm16],
+    [pm17,pm18,img3,img1
   ],
     [img5,imgsq2,img6,img4],
     [

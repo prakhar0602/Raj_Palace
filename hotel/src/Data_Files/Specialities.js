@@ -10,12 +10,12 @@ import p4 from "../assets/Images/Specialities/d.png";
 import p5 from "../assets/Images/Specialities/e.png";
 
 export const specialties = [
-  {
-    heading: "Museum(s) & Rooms with Original Historical Artefacts",
-    imageSrc: f1,
-    description:
-      "The guest visiting the subcontinent are captivated by stories of India's kings and princes known as 'maharajas'. These immensely powerful feudal rulers resided in vast palaces throughout India in which every conceivable luxury was at their disposal. The grandeur and mystique of one of the Royal Families of Rajasthan can be seen and experienced today at 'The Raj Palace'. The hotel houses 50 luxurious rooms and suites.",
-  },
+  // {
+  //   heading: "Museum(s) & Rooms with Original Historical Artefacts",
+  //   imageSrc: f1,
+  //   description:
+  //     "The guest visiting the subcontinent are captivated by stories of India's kings and princes known as 'maharajas'. These immensely powerful feudal rulers resided in vast palaces throughout India in which every conceivable luxury was at their disposal. The grandeur and mystique of one of the Royal Families of Rajasthan can be seen and experienced today at 'The Raj Palace'. The hotel houses 50 luxurious rooms and suites.",
+  // },
   {
     heading: "GLOBAL GOURMET MEALS 'A CULINARY DELIGHT'",
     imageSrc: f2,
